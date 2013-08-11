@@ -10,4 +10,6 @@
 
 @interface WFViewController : UIViewController
 
+- (IBAction)startButton:(id)sender;
+
 @end

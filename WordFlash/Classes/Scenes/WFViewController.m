@@ -7,8 +7,11 @@
 //
 
 #import "WFViewController.h"
+#import "WFWordListViewController.h"
 
 @interface WFViewController ()
+
+@property (nonatomic, strong)WFWordListViewController *wordListVC;
 
 @end
 
@@ -24,6 +27,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)startButton:(id)sender
+{
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
+	[self.view addSubview:_wordListVC.view];
+
 }
 
 @end
