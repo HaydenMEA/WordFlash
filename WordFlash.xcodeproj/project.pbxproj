@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28DC5E3017B856A9002FDCBB /* WFWordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E2F17B856A9002FDCBB /* WFWordList.m */; };
+		28DC5E3317B85701002FDCBB /* WFWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3217B85701002FDCBB /* WFWordController.m */; };
 		67A71D2317B844AE0010DDE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2217B844AE0010DDE1 /* UIKit.framework */; };
 		67A71D2517B844AE0010DDE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2417B844AE0010DDE1 /* Foundation.framework */; };
 		67A71D2717B844AE0010DDE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2617B844AE0010DDE1 /* CoreGraphics.framework */; };
@@ -22,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28DC5E2E17B856A9002FDCBB /* WFWordList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFWordList.h; path = WordFlash/Classes/WFWordList.h; sourceTree = SOURCE_ROOT; };
+		28DC5E2F17B856A9002FDCBB /* WFWordList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFWordList.m; path = WordFlash/Classes/WFWordList.m; sourceTree = SOURCE_ROOT; };
+		28DC5E3117B85701002FDCBB /* WFWordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWordController.h; sourceTree = SOURCE_ROOT; };
+		28DC5E3217B85701002FDCBB /* WFWordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWordController.m; sourceTree = SOURCE_ROOT; };
 		67A71D1F17B844AE0010DDE1 /* WordFlash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFlash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A71D2217B844AE0010DDE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		67A71D2417B844AE0010DDE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,6 +143,10 @@
 		67A71D4B17B845110010DDE1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				28DC5E2E17B856A9002FDCBB /* WFWordList.h */,
+				28DC5E2F17B856A9002FDCBB /* WFWordList.m */,
+				28DC5E3117B85701002FDCBB /* WFWordController.h */,
+				28DC5E3217B85701002FDCBB /* WFWordController.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +231,8 @@
 				67A71D2F17B844AE0010DDE1 /* main.m in Sources */,
 				67A71D5117B845110010DDE1 /* WFViewController.m in Sources */,
 				67A71D5217B845110010DDE1 /* WFAppDelegate.m in Sources */,
+				28DC5E3017B856A9002FDCBB /* WFWordList.m in Sources */,
+				28DC5E3317B85701002FDCBB /* WFWordController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
