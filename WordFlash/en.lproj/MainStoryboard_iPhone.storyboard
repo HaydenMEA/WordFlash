@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="124" y="112"/>
         </scene>
-        <!--View Controller-->
+        <!--Word List View Controller-->
         <scene sceneID="v2d-GR-4tr">
             <objects>
-                <viewController id="IIl-fd-wB3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WordListViewController" id="IIl-fd-wB3" customClass="WFWordListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dED-km-CGh">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		018B775817B8585F007C2925 /* WFWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B775717B8585F007C2925 /* WFWordListViewController.m */; };
 		67A71D2317B844AE0010DDE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2217B844AE0010DDE1 /* UIKit.framework */; };
 		67A71D2517B844AE0010DDE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2417B844AE0010DDE1 /* Foundation.framework */; };
 		67A71D2717B844AE0010DDE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2617B844AE0010DDE1 /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		018B775617B8585E007C2925 /* WFWordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWordListViewController.h; sourceTree = "<group>"; };
+		018B775717B8585F007C2925 /* WFWordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWordListViewController.m; sourceTree = "<group>"; };
 		67A71D1F17B844AE0010DDE1 /* WordFlash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFlash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A71D2217B844AE0010DDE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		67A71D2417B844AE0010DDE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +133,8 @@
 			children = (
 				67A71D5517B8473F0010DDE1 /* WFViewController.h */,
 				67A71D5617B8473F0010DDE1 /* WFViewController.m */,
+				018B775617B8585E007C2925 /* WFWordListViewController.h */,
+				018B775717B8585F007C2925 /* WFWordListViewController.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				67A71D2F17B844AE0010DDE1 /* main.m in Sources */,
 				67A71D5917B8473F0010DDE1 /* WFViewController.m in Sources */,
 				67A71D5A17B8473F0010DDE1 /* WFAppDelegate.m in Sources */,
+				018B775817B8585F007C2925 /* WFWordListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
