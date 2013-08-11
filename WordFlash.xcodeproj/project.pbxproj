@@ -17,8 +17,8 @@
 		67A71D3917B844AE0010DDE1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67A71D3817B844AE0010DDE1 /* Default-568h@2x.png */; };
 		67A71D3C17B844AE0010DDE1 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A71D3A17B844AE0010DDE1 /* MainStoryboard_iPhone.storyboard */; };
 		67A71D3F17B844AE0010DDE1 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A71D3D17B844AE0010DDE1 /* MainStoryboard_iPad.storyboard */; };
-		67A71D5117B845110010DDE1 /* WFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A71D4E17B845110010DDE1 /* WFViewController.m */; };
-		67A71D5217B845110010DDE1 /* WFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A71D5017B845110010DDE1 /* WFAppDelegate.m */; };
+		67A71D5917B8473F0010DDE1 /* WFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A71D5617B8473F0010DDE1 /* WFViewController.m */; };
+		67A71D5A17B8473F0010DDE1 /* WFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A71D5817B8473F0010DDE1 /* WFAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +35,10 @@
 		67A71D3817B844AE0010DDE1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		67A71D3B17B844AE0010DDE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		67A71D3E17B844AE0010DDE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		67A71D4D17B845110010DDE1 /* WFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFViewController.h; sourceTree = "<group>"; };
-		67A71D4E17B845110010DDE1 /* WFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFViewController.m; sourceTree = "<group>"; };
-		67A71D4F17B845110010DDE1 /* WFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAppDelegate.h; sourceTree = "<group>"; };
-		67A71D5017B845110010DDE1 /* WFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppDelegate.m; sourceTree = "<group>"; };
+		67A71D5517B8473F0010DDE1 /* WFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFViewController.h; sourceTree = "<group>"; };
+		67A71D5617B8473F0010DDE1 /* WFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFViewController.m; sourceTree = "<group>"; };
+		67A71D5717B8473F0010DDE1 /* WFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAppDelegate.h; sourceTree = "<group>"; };
+		67A71D5817B8473F0010DDE1 /* WFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 			children = (
 				67A71D3A17B844AE0010DDE1 /* MainStoryboard_iPhone.storyboard */,
 				67A71D3D17B844AE0010DDE1 /* MainStoryboard_iPad.storyboard */,
-				67A71D4917B845110010DDE1 /* Classes */,
+				67A71D5317B8473F0010DDE1 /* Classes */,
 				67A71D4817B845110010DDE1 /* Assets */,
 				67A71D2917B844AE0010DDE1 /* Supporting Files */,
 			);
@@ -115,37 +115,21 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		67A71D4917B845110010DDE1 /* Classes */ = {
+		67A71D5317B8473F0010DDE1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				67A71D4F17B845110010DDE1 /* WFAppDelegate.h */,
-				67A71D5017B845110010DDE1 /* WFAppDelegate.m */,
-				67A71D4A17B845110010DDE1 /* Categories */,
-				67A71D4B17B845110010DDE1 /* Model */,
-				67A71D4C17B845110010DDE1 /* Scenes */,
+				67A71D5417B8473F0010DDE1 /* Scenes */,
+				67A71D5717B8473F0010DDE1 /* WFAppDelegate.h */,
+				67A71D5817B8473F0010DDE1 /* WFAppDelegate.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		67A71D4A17B845110010DDE1 /* Categories */ = {
+		67A71D5417B8473F0010DDE1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		67A71D4B17B845110010DDE1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		67A71D4C17B845110010DDE1 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				67A71D4D17B845110010DDE1 /* WFViewController.h */,
-				67A71D4E17B845110010DDE1 /* WFViewController.m */,
+				67A71D5517B8473F0010DDE1 /* WFViewController.h */,
+				67A71D5617B8473F0010DDE1 /* WFViewController.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -219,8 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				67A71D2F17B844AE0010DDE1 /* main.m in Sources */,
-				67A71D5117B845110010DDE1 /* WFViewController.m in Sources */,
-				67A71D5217B845110010DDE1 /* WFAppDelegate.m in Sources */,
+				67A71D5917B8473F0010DDE1 /* WFViewController.m in Sources */,
+				67A71D5A17B8473F0010DDE1 /* WFAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
