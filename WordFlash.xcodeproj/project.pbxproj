@@ -13,6 +13,7 @@
 		018B776817B86B53007C2925 /* WFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */; };
 		018B776917B871D8007C2925 /* WFWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3B17B85C4F002FDCBB /* WFWordListViewController.m */; };
 		018B779F17B87869007C2925 /* UIButton+ExtraFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B779E17B87869007C2925 /* UIButton+ExtraFactory.m */; };
+		01FC2E9E17B87B0000540B0D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FC2E9C17B87AF700540B0D /* CoreMotion.framework */; };
 		28DC5E4417B864CD002FDCBB /* WFword.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E4317B864CD002FDCBB /* WFword.m */; };
 		67A71D2317B844AE0010DDE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2217B844AE0010DDE1 /* UIKit.framework */; };
 		67A71D2517B844AE0010DDE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2417B844AE0010DDE1 /* Foundation.framework */; };
@@ -36,6 +37,7 @@
 		018B776617B8687D007C2925 /* WFArrowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFArrowViewController.m; sourceTree = "<group>"; };
 		018B779D17B87869007C2925 /* UIButton+ExtraFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ExtraFactory.h"; sourceTree = "<group>"; };
 		018B779E17B87869007C2925 /* UIButton+ExtraFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ExtraFactory.m"; sourceTree = "<group>"; };
+		01FC2E9C17B87AF700540B0D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		28DC5E3817B85C4F002FDCBB /* WFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFRootViewController.h; sourceTree = "<group>"; };
 		28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFRootViewController.m; sourceTree = "<group>"; };
 		28DC5E3A17B85C4F002FDCBB /* WFWordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWordListViewController.h; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01FC2E9E17B87B0000540B0D /* CoreMotion.framework in Frameworks */,
 				67A71D2317B844AE0010DDE1 /* UIKit.framework in Frameworks */,
 				67A71D2517B844AE0010DDE1 /* Foundation.framework in Frameworks */,
 				67A71D2717B844AE0010DDE1 /* CoreGraphics.framework in Frameworks */,
@@ -119,6 +122,7 @@
 		67A71D2117B844AE0010DDE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01FC2E9C17B87AF700540B0D /* CoreMotion.framework */,
 				67A71D2217B844AE0010DDE1 /* UIKit.framework */,
 				67A71D2417B844AE0010DDE1 /* Foundation.framework */,
 				67A71D2617B844AE0010DDE1 /* CoreGraphics.framework */,
