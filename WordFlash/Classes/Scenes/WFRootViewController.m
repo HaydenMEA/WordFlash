@@ -37,6 +37,8 @@
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
 	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:10];
+	[_gameVC.view removeFromSuperview];
+	
 
 }
 
