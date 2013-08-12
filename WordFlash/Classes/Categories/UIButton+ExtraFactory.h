@@ -1,5 +1,5 @@
 //
-//  WFGameViewController.h
+//  UIButton+ExtraFactory.h
 //  WordFlash
 //
 //  Created by Matthew Seymour on 12/08/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WFGameViewController : UIViewController
-
-
+@interface UIButton (ExtraFactory)
 
 @end

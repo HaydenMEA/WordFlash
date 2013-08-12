@@ -12,6 +12,7 @@
 		018B776717B8687D007C2925 /* WFArrowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B776617B8687D007C2925 /* WFArrowViewController.m */; };
 		018B776817B86B53007C2925 /* WFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */; };
 		018B776917B871D8007C2925 /* WFWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3B17B85C4F002FDCBB /* WFWordListViewController.m */; };
+		018B779F17B87869007C2925 /* UIButton+ExtraFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B779E17B87869007C2925 /* UIButton+ExtraFactory.m */; };
 		28DC5E4417B864CD002FDCBB /* WFword.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E4317B864CD002FDCBB /* WFword.m */; };
 		67A71D2317B844AE0010DDE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2217B844AE0010DDE1 /* UIKit.framework */; };
 		67A71D2517B844AE0010DDE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2417B844AE0010DDE1 /* Foundation.framework */; };
@@ -33,6 +34,8 @@
 		018B776017B862BD007C2925 /* WFWordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWordController.m; sourceTree = "<group>"; };
 		018B776517B8687D007C2925 /* WFArrowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFArrowViewController.h; sourceTree = "<group>"; };
 		018B776617B8687D007C2925 /* WFArrowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFArrowViewController.m; sourceTree = "<group>"; };
+		018B779D17B87869007C2925 /* UIButton+ExtraFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ExtraFactory.h"; sourceTree = "<group>"; };
+		018B779E17B87869007C2925 /* UIButton+ExtraFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ExtraFactory.m"; sourceTree = "<group>"; };
 		28DC5E3817B85C4F002FDCBB /* WFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFRootViewController.h; sourceTree = "<group>"; };
 		28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFRootViewController.m; sourceTree = "<group>"; };
 		28DC5E3A17B85C4F002FDCBB /* WFWordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWordListViewController.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 		67A71D5417B8473F0010DDE1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				018B779D17B87869007C2925 /* UIButton+ExtraFactory.h */,
+				018B779E17B87869007C2925 /* UIButton+ExtraFactory.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				018B776717B8687D007C2925 /* WFArrowViewController.m in Sources */,
 				018B776817B86B53007C2925 /* WFRootViewController.m in Sources */,
 				018B776917B871D8007C2925 /* WFWordListViewController.m in Sources */,
+				018B779F17B87869007C2925 /* UIButton+ExtraFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
