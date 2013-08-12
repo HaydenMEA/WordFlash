@@ -44,7 +44,7 @@
 	
 	return self;
 }
--(void)getWordsToRemember
+-(NSArray *)getWordsToRemember
 {
 	NSMutableArray *selectedWords = [[NSMutableArray alloc] init];	//Create a set to hold a selection of words
 	NSMutableArray *wordSelection = [[NSMutableArray alloc] initWithArray:_words copyItems:YES];
@@ -55,7 +55,7 @@
 	[wordSelection removeObject:wordSelection[indexNumberToUse]];//- populate the set with the words from the array
 		 }
 	
-	
+	return selectedWords;
 }
 
 

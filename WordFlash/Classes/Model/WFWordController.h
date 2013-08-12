@@ -14,6 +14,7 @@
 
 
 @property(nonatomic, strong) NSArray *words;
+@property(nonatomic, strong) NSMutableArray *selectedWords;
 
 
 
