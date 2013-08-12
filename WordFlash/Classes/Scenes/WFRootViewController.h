@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WFViewController : UIViewController
+@interface WFRootViewController : UIViewController
 
 - (IBAction)startButton:(id)sender;
 

@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Hayden Young. All rights reserved.
 //
 
-#import "WFViewController.h"
+#import "WFRootViewController.h"
 #import "WFWordListViewController.h"
 
-@interface WFViewController ()
+@interface WFRootViewController ()
 
 @property (nonatomic, strong)WFWordListViewController *wordListVC;
 
 @end
 
-@implementation WFViewController
+@implementation WFRootViewController
 
 - (void)viewDidLoad
 {

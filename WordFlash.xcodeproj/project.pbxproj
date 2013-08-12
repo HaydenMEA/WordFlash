@@ -11,7 +11,7 @@
 		28DC5E3017B856A9002FDCBB /* WFWordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E2F17B856A9002FDCBB /* WFWordList.m */; };
 		28DC5E3317B85701002FDCBB /* WFWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3217B85701002FDCBB /* WFWordController.m */; };
 		28DC5E3C17B85C4F002FDCBB /* WFWordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3617B85C4F002FDCBB /* WFWordList.m */; };
-		28DC5E3D17B85C4F002FDCBB /* WFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3917B85C4F002FDCBB /* WFViewController.m */; };
+		28DC5E3D17B85C4F002FDCBB /* WFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */; };
 		28DC5E3E17B85C4F002FDCBB /* WFWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3B17B85C4F002FDCBB /* WFWordListViewController.m */; };
 		28DC5E4117B85CC8002FDCBB /* WFWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E4017B85CC8002FDCBB /* WFWordController.m */; };
 		67A71D2317B844AE0010DDE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2217B844AE0010DDE1 /* UIKit.framework */; };
@@ -34,8 +34,8 @@
 		28DC5E3217B85701002FDCBB /* WFWordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWordController.m; sourceTree = SOURCE_ROOT; };
 		28DC5E3517B85C4F002FDCBB /* WFWordList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWordList.h; sourceTree = "<group>"; };
 		28DC5E3617B85C4F002FDCBB /* WFWordList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWordList.m; sourceTree = "<group>"; };
-		28DC5E3817B85C4F002FDCBB /* WFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFViewController.h; sourceTree = "<group>"; };
-		28DC5E3917B85C4F002FDCBB /* WFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFViewController.m; sourceTree = "<group>"; };
+		28DC5E3817B85C4F002FDCBB /* WFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFRootViewController.h; sourceTree = "<group>"; };
+		28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFRootViewController.m; sourceTree = "<group>"; };
 		28DC5E3A17B85C4F002FDCBB /* WFWordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWordListViewController.h; sourceTree = "<group>"; };
 		28DC5E3B17B85C4F002FDCBB /* WFWordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWordListViewController.m; sourceTree = "<group>"; };
 		28DC5E3F17B85CC8002FDCBB /* WFWordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWordController.h; sourceTree = "<group>"; };
@@ -86,8 +86,8 @@
 		28DC5E3717B85C4F002FDCBB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				28DC5E3817B85C4F002FDCBB /* WFViewController.h */,
-				28DC5E3917B85C4F002FDCBB /* WFViewController.m */,
+				28DC5E3817B85C4F002FDCBB /* WFRootViewController.h */,
+				28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */,
 				28DC5E3A17B85C4F002FDCBB /* WFWordListViewController.h */,
 				28DC5E3B17B85C4F002FDCBB /* WFWordListViewController.m */,
 			);
@@ -248,7 +248,7 @@
 				67A71D5A17B8473F0010DDE1 /* WFAppDelegate.m in Sources */,
 				018B775817B8585F007C2925 /* WFWordListViewController.m in Sources */,
 				28DC5E3C17B85C4F002FDCBB /* WFWordList.m in Sources */,
-				28DC5E3D17B85C4F002FDCBB /* WFViewController.m in Sources */,
+				28DC5E3D17B85C4F002FDCBB /* WFRootViewController.m in Sources */,
 				28DC5E3E17B85C4F002FDCBB /* WFWordListViewController.m in Sources */,
 				28DC5E4117B85CC8002FDCBB /* WFWordController.m in Sources */,
 			);
