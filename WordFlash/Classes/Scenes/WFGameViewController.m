@@ -44,11 +44,11 @@
 	_wordController = [WFWordController defaultManager];
 	NSLog(@"%@", _wordController.words);
 	_buttonMutable = [[NSMutableArray alloc] init];
-
+	
 	
 	for (int i = 0; i < _wordController.words.count; i++)
 	{
-
+		
 		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:nil];
 		[self.view addSubview:button];
 		[_buttonMutable addObject:button];
@@ -56,12 +56,12 @@
 	}
 	NSLog(@"%@",_buttonMutable);
 	
-//	_testButton = [UIButton buttonWithTitle:[_wordController.words[2] string] target:self selector:nil];
-//	[self.view addSubview:_testButton];
-
+	//	_testButton = [UIButton buttonWithTitle:[_wordController.words[2] string] target:self selector:nil];
+	//	[self.view addSubview:_testButton];
+	
 	_displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(buttonMove:)];
 	[_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-
+	
 	
 }
 - (void)buttonMove:(CADisplayLink *)sender
@@ -76,23 +76,11 @@
 		
 		if (button.center.y > self.view.frame.size.height)
 		{
-			button.center = CGPointMake(arc4random() % (int)(self.view.frame.size.width), 0);
+			button.center = CGPointMake(arc4random() % (int)(self.view.frame.size.width), 0-arc4random()%300);
 		}
 		
 	}
-    //	CGPoint point = self.view.center;
-//    CGFloat x = _testButton.center.x + 0;
-//	CGFloat y = _testButton.center.y + 5;
-//	
-//	_testButton.center = CGPointMake(x, y);
-//	
-//	if (_testButton.center.y > self.view.frame.size.height)
-//	{
-//		_testButton.center = CGPointMake(x, 0);
-//	}
-//	
-//	
-//	
+	
 }
 - (void)didReceiveMemoryWarning
 {
