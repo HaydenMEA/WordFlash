@@ -10,4 +10,7 @@
 
 @interface WFword : NSObject
 
+@property(nonatomic, strong) NSString *string;
+
+
 @end

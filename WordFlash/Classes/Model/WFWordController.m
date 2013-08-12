@@ -7,6 +7,7 @@
 //
 
 #import "WFWordController.h"
+#import "WFword.h"
 
 
 
@@ -31,10 +32,14 @@
 	if(self)
 	{
 		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee"];
+		NSMutableArray *wordsM = [[NSMutableArray alloc] init];
+
 		[strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//			WFWord *word = [NSArray alloc] initWithObjects:(id), obj, nil;
-			
+			WFword *word = [[WFword alloc] init];
+			word.string = obj;
+			[wordsM addObject:word];
 		}];
+		_words = wordsM;
 	}
 	
 	return self;
