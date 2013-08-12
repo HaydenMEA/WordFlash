@@ -31,13 +31,16 @@
 	self = [super init];
 	if(self)
 	{
-		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee", @"Audion", @"Anatidaephobia"];
+		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"Weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee", @"Audion", @"Anatidaephobia", @"Agateophobia"];
 		
 		NSMutableArray *wordsM = [[NSMutableArray alloc] init];
 
 		[strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 			WFword *word = [[WFword alloc] init];
 			word.string = obj;
+			if((20 / [obj length]) < 5)	//--give each word different speeds based on length
+				word.speed = 5;
+			else word.speed = 20 / [obj length];
 			[wordsM addObject:word];
 		}];
 		_words = wordsM;
@@ -45,6 +48,9 @@
 	
 	return self;
 }
+
+
+
 
 -(NSArray *)getWordsToRemember
 {

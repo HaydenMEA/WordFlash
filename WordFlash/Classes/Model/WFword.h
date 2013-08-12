@@ -11,6 +11,7 @@
 @interface WFword : NSObject
 
 @property(nonatomic, strong) NSString *string;
+@property(nonatomic, assign) CGFloat speed;
 
 
 @end

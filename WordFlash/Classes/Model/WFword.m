@@ -10,11 +10,12 @@
 
 @implementation WFword
 
+
 /// --- how to print out other descriptions of objects
 
 - (NSString *)description
 {
-	return 	[NSString stringWithFormat:@"%@, %@", [super description], self.string];
+	return 	[NSString stringWithFormat:@"%@, %@, %f", [super description], self.string, self.speed];
 }
 
 @end
