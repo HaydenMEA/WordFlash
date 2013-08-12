@@ -31,7 +31,7 @@
 	self = [super init];
 	if(self)
 	{
-		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee"];
+		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee", @"Audion", @"Anatidaephobia"];
 		NSMutableArray *wordsM = [[NSMutableArray alloc] init];
 
 		[strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -57,6 +57,8 @@
 	
 	return selectedWords;
 }
+
+
 
 
 @end
