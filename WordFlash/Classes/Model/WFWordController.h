@@ -14,9 +14,10 @@
 
 
 @property(nonatomic, strong) NSArray *words;
-@property(nonatomic, strong) NSMutableArray *selectedWords;
+@property(nonatomic, strong) NSArray *selectedWords;
 
 
 +(WFWordController *)defaultManager;
+-(NSArray *)getWordsToRemember;
 
 @end

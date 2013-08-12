@@ -10,10 +10,7 @@
 
 @implementation WFword
 
-
-
 /// --- how to print out other descriptions of objects
-
 
 - (NSString *)description
 {

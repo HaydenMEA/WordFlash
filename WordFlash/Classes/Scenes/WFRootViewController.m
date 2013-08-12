@@ -36,7 +36,7 @@
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
-	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:2];
+	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:10];
 	[_gameVC.view removeFromSuperview];
 
 	CGFloat width = self.view.frame.size.width;

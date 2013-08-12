@@ -2,4 +2,80 @@
 <Bucket
    type = "1"
    version = "1.0">
+   <FileBreakpoints>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WordFlash/Classes/Scenes/WFGameViewController.m"
+         timestampString = "398033342.115169"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WordFlash/Classes/Scenes/WFGameViewController.m"
+         timestampString = "398033342.115169"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "44"
+         endingLineNumber = "44"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WordFlash/Classes/Scenes/WFGameViewController.m"
+         timestampString = "397974789.123059"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "20"
+         endingLineNumber = "20"
+         landmarkName = "@interface WFGameViewController()"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WordFlash/Classes/Scenes/WFGameViewController.m"
+         timestampString = "397974789.753158"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "19"
+         endingLineNumber = "19"
+         landmarkName = "@interface WFGameViewController()"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WordFlash/Classes/Scenes/WFGameViewController.m"
+         timestampString = "397974794.475502"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "12"
+         endingLineNumber = "12">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "WordFlash/Classes/Scenes/WFGameViewController.m"
+         timestampString = "397974795.029618"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "11"
+         endingLineNumber = "11">
+      </FileBreakpoint>
+   </FileBreakpoints>
 </Bucket>

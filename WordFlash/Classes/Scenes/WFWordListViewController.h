@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WFWordListViewController : UIViewController
+@interface WFWordListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+
 
 @end
