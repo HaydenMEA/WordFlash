@@ -45,15 +45,22 @@
 	[_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 
 	
-	
 }
 - (void)buttonMove:(CADisplayLink *)sender
 {
     //	CGPoint point = self.view.center;
     CGFloat x = _testButton.center.x + 0;
-	CGFloat y = _testButton.center.y + 2;
+	CGFloat y = _testButton.center.y + 5;
 	
 	_testButton.center = CGPointMake(x, y);
+	
+	if (_testButton.center.y > self.view.frame.size.height)
+	{
+		_testButton.center = CGPointMake(x, 0);
+	}
+	
+	
+	
 }
 - (void)didReceiveMemoryWarning
 {
