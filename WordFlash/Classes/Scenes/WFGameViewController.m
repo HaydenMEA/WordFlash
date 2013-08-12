@@ -66,11 +66,13 @@
 }
 - (void)buttonMove:(CADisplayLink *)sender
 {
+	CGRectMake(0, 0, 200, self.view.frame.size.height);
+	
 	for (int r = 0; r < _buttonMutable.count; r++)
 	{
 		UIButton *button = _buttonMutable[r];
 		CGFloat x = button.center.x + 0;
-		CGFloat y = button.center.y + arc4random() % 7;
+		CGFloat y = button.center.y + 3;
 		
 		button.center = CGPointMake(x, y);
 		
