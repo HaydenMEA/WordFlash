@@ -42,7 +42,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="gameViewAction:" destination="2" eventType="touchUpInside" id="9Fb-Gh-cld"/>
                                     <action selector="startButton:" destination="2" eventType="touchUpInside" id="P4H-8x-ur9"/>
                                 </connections>
                             </button>
@@ -110,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="520" y="112"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="rhs-qa-3uL">
             <objects>
-                <viewController id="X1f-fp-non" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WFGameViewController" id="X1f-fp-non" customClass="WFGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kDY-oS-uxk">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

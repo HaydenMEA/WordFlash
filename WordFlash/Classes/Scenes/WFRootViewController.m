@@ -8,10 +8,12 @@
 
 #import "WFRootViewController.h"
 #import "WFWordListViewController.h"
+#import "WFGameViewController.h"
 
 @interface WFRootViewController ()
 
 @property (nonatomic, strong)WFWordListViewController *wordListVC;
+@property (nonatomic, strong)WFGameViewController *gameVC;
 
 @end
 
@@ -34,12 +36,16 @@
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
-	
-
+	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:10];
 
 }
 
-- (IBAction)gameViewAction:(id)sender {
+- (IBAction)gameViewAction:(id)sender
+{
+
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+	_gameVC = [storyboard instantiateViewControllerWithIdentifier:@"WFGameViewController"];
+	[self.view addSubview:_gameVC.view];
 }
 
 @end

@@ -12,4 +12,6 @@
 
 - (IBAction)startButton:(id)sender;
 
+- (IBAction)gameViewAction:(id)sender;
+
 @end
