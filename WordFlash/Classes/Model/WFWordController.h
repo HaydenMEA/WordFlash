@@ -17,5 +17,6 @@
 @property(nonatomic, strong) NSMutableArray *selectedWords;
 
 
++(WFWordController *)defaultManager;
 
 @end
