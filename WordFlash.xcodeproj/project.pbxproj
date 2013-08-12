@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		018B775817B8585F007C2925 /* WFWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B775717B8585F007C2925 /* WFWordListViewController.m */; };
+		018B775B17B86031007C2925 /* WFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B775A17B86031007C2925 /* WFGameViewController.m */; };
 		28DC5E3017B856A9002FDCBB /* WFWordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E2F17B856A9002FDCBB /* WFWordList.m */; };
 		28DC5E3317B85701002FDCBB /* WFWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3217B85701002FDCBB /* WFWordController.m */; };
 		28DC5E3C17B85C4F002FDCBB /* WFWordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3617B85C4F002FDCBB /* WFWordList.m */; };
@@ -30,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		018B775717B8585F007C2925 /* WFWordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWordListViewController.m; sourceTree = "<group>"; };
+		018B775917B86031007C2925 /* WFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFGameViewController.h; sourceTree = "<group>"; };
+		018B775A17B86031007C2925 /* WFGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFGameViewController.m; sourceTree = "<group>"; };
 		28DC5E2F17B856A9002FDCBB /* WFWordList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFWordList.m; path = WordFlash/Classes/WFWordList.m; sourceTree = SOURCE_ROOT; };
 		28DC5E3217B85701002FDCBB /* WFWordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWordController.m; sourceTree = SOURCE_ROOT; };
 		28DC5E3517B85C4F002FDCBB /* WFWordList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWordList.h; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */,
 				28DC5E3A17B85C4F002FDCBB /* WFWordListViewController.h */,
 				28DC5E3B17B85C4F002FDCBB /* WFWordListViewController.m */,
+				018B775917B86031007C2925 /* WFGameViewController.h */,
+				018B775A17B86031007C2925 /* WFGameViewController.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				28DC5E3D17B85C4F002FDCBB /* WFRootViewController.m in Sources */,
 				28DC5E3E17B85C4F002FDCBB /* WFWordListViewController.m in Sources */,
 				28DC5E4117B85CC8002FDCBB /* WFWordController.m in Sources */,
+				018B775B17B86031007C2925 /* WFGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

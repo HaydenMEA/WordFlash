@@ -34,7 +34,12 @@
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
+	
 
+
+}
+
+- (IBAction)gameViewAction:(id)sender {
 }
 
 @end
