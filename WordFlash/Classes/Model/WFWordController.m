@@ -45,7 +45,7 @@
 				((variableSpeed / [obj length]) < minSpeed)	//--give each word different speeds based on length
 				word.speed = minSpeed;
 			else if
-				(word.speed > maxSpeed)
+				(variableSpeed / [obj length] > maxSpeed)
 				word.speed = maxSpeed;
 			else
 				(word.speed = variableSpeed / [obj length]);
