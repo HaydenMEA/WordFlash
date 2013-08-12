@@ -10,4 +10,7 @@
 
 @interface UIButton (ExtraFactory)
 
++ (UIButton *)buttonWithTitle:(NSString *)title target:(id)target selector:(SEL)selector;
+
+
 @end

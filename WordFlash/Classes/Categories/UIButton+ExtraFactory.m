@@ -10,4 +10,14 @@
 
 @implementation UIButton (ExtraFactory)
 
++(UIButton *)buttonWithTitle:(NSString *)title target:(id)target selector:(SEL)selector
+{
+	UIButton *button =[UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[button setTitle:title forState:(UIControlStateNormal)];
+	[button sizeToFit];
+	[button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+	
+	return button;
+}
+
 @end
