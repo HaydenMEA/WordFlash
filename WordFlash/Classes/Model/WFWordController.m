@@ -44,8 +44,13 @@
 	
 	return self;
 }
-//(void)getWordsToRemember
+//-(void)getWordsToRemember
 //{
+//	NSSet *selectedWords = [[NSSet alloc] init];	//Create a set to hold a selection of words
+//	//--select words to use from the dictionary
+//	//- populate the set with the words from the array
+//	
+//	
 //	
 //}
 
