@@ -10,7 +10,7 @@
 
 @class WFWordController;
 
-@interface WFWordController : NSDictionary
+@interface WFWordController : NSObject
 
 
 @property(nonatomic, strong) NSArray *words;
