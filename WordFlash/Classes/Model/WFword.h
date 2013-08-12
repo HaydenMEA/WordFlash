@@ -1,13 +1,13 @@
 //
-//  WFWordList.m
+//  WFword.h
 //  WordFlash
 //
 //  Created by Tony Newth on 12/08/13.
 //  Copyright (c) 2013 Hayden Young. All rights reserved.
 //
 
-#import "WFWordList.h"
+#import <Foundation/Foundation.h>
 
-@implementation WFWordList
+@interface WFword : NSObject
 
 @end

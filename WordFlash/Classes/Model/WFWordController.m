@@ -10,7 +10,7 @@
 #import "WFWordList.h"
 
 @interface WFWordList ();
-@property (nonatomic, strong) NSDictionary *words;
+
 
 
 @end
@@ -36,11 +36,14 @@
 	self = [super init];
 	if(self)
 	{
-
-		
+		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee"];
+		[strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+			WFWord *word = [NSArray alloc] initWithObjects:(id), obj, nil;
+			
+		}];
 	}
-
-return self;
+	
+	return self;
 }
 
 

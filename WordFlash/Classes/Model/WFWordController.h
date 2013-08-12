@@ -13,7 +13,7 @@
 @interface WFWordController : NSDictionary
 
 
-
+@property(nonatomic, strong) NSArray *words;
 
 
 
