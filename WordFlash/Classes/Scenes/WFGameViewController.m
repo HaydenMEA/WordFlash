@@ -8,16 +8,16 @@
 
 #import "WFGameViewController.h"
 #import <CoreMotion/CoreMotion.h>
-//#import "WFWordController.h"
-//#import "WFword.h"
+#import "WFWordController.h"
+#import "WFword.h"
 
 
 @interface WFGameViewController ()
 
 @property (nonatomic, strong) UIButton *testButton;
 @property (nonatomic, strong) CADisplayLink *displayLink;
-//@property (nonatomic, strong) WFWordController *wordController;
-//@property (nonatomic, strong) NSArray *words;
+@property (nonatomic, strong) WFWordController *wordController;
+@property (nonatomic, strong) NSArray *words;
 
 
 @end
@@ -42,10 +42,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-//	_wordController = [WFWordController defaultManager];
-//	NSLog(@"%@", _wordController);
+	_wordController = [WFWordController defaultManager];
+	NSLog(@"%@", _wordController.words);
 	
-	_testButton = [UIButton buttonWithTitle:@"test" target:self selector:nil];
+	_testButton = [UIButton buttonWithTitle:[_wordController.words[2] string] target:self selector:nil];
 	[self.view addSubview:_testButton];
 
 	_displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(buttonMove:)];

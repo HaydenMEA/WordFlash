@@ -12,10 +12,12 @@
 
 
 
+/// --- how to print out other descriptions of objects
 
 
-
-
-
+- (NSString *)description
+{
+	return 	[NSString stringWithFormat:@"%@, %@", [super description], self.string];
+}
 
 @end
