@@ -38,9 +38,17 @@
 		[strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 			WFword *word = [[WFword alloc] init];
 			word.string = obj;
-			if((50 / [obj length]) < 5)	//--give each word different speeds based on length
-				word.speed = 5;
-			else word.speed = 50 / [obj length];
+			int minSpeed = 5;
+			int maxSpeed = 20;
+			int variableSpeed = 50;
+			if
+				((variableSpeed / [obj length]) < minSpeed)	//--give each word different speeds based on length
+				word.speed = minSpeed;
+			else if
+				(word.speed > maxSpeed)
+				word.speed = maxSpeed;
+			else
+				(word.speed = variableSpeed / [obj length]);
 			[wordsM addObject:word];
 		}];
 		_words = wordsM;
