@@ -51,6 +51,7 @@
 		
 		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:nil];
 		[self.view addSubview:button];
+		[self randomizeCenter:button];
 		[_buttonMutable addObject:button];
 		
 	}
@@ -64,23 +65,41 @@
 	
 	
 }
+- (void)randomizeCenter:(UIButton *)button
+{
+    int width = self.view.frame.size.width;
+    int buttonWidth = button.frame.size.width;
+
+        int randomX = (arc4random() % width);
+        
+        if (randomX < buttonWidth * 0.5)
+        {
+            randomX += buttonWidth * 0.5;
+        }
+        
+        if (randomX > (width-buttonWidth *0.5))
+        {
+            randomX = width - buttonWidth * 0.5;
+        }
+        button.center = CGPointMake(randomX, 0-arc4random()%300);
+    
+}
+
 - (void)buttonMove:(CADisplayLink *)sender
 {
-	CGRectMake(0, 0, 200, self.view.frame.size.height);
 	
 	for (int r = 0; r < _buttonMutable.count; r++)
 	{
 		UIButton *button = _buttonMutable[r];
+		
 		CGFloat x = button.center.x + 0;
 		CGFloat y = button.center.y + 3;
 		
 		button.center = CGPointMake(x, y);
-		
 		if (button.center.y > self.view.frame.size.height)
 		{
-			button.center = CGPointMake(arc4random() % (int)(self.view.frame.size.width), 0-arc4random()%300);
-		}
-		
+		[self randomizeCenter:button];
+		} 
 	}
 	
 }
