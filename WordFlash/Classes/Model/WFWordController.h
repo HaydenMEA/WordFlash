@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class WFWordController;
+@class WFword;
 
 @interface WFWordController : NSObject
 
@@ -19,5 +20,6 @@
 
 +(WFWordController *)defaultManager;
 -(NSArray *)getWordsToRemember;
+- (BOOL)containsWord:(WFword *)word;
 
 @end

@@ -61,7 +61,12 @@
 	return selectedWords;
 }
 
-
+- (BOOL)containsWord:(WFword *)word		//--checks if the word existed in selected words
+{
+	BOOL contains = [_selectedWords containsObject:word];
+	
+	return contains;
+}
 
 
 @end
