@@ -7,10 +7,13 @@
 //
 
 #import "WFGameViewController.h"
+#import <CoreMotion/CoreMotion.h>
 
 
 @interface WFGameViewController ()
 
+@property (nonatomic, strong)UIButton *testButton;
+@property (nonatomic, strong) CADisplayLink *displayLink;
 
 
 @end
@@ -29,17 +32,29 @@
 
 
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-	UIButton *testButton = [UIButton buttonWithTitle:@"test" target:self selector:nil];
-	[self.view addSubview:testButton];
+	_testButton = [UIButton buttonWithTitle:@"test" target:self selector:nil];
+	[self.view addSubview:_testButton];
 
+	_displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(buttonMove:)];
+	[_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 
 	
+	
 }
-
+- (void)buttonMove:(CADisplayLink *)sender
+{
+    //	CGPoint point = self.view.center;
+    CGFloat x = _testButton.center.x + 0;
+	CGFloat y = _testButton.center.y + 2;
+	
+	_testButton.center = CGPointMake(x, y);
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
