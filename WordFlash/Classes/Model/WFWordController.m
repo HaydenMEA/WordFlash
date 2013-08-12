@@ -44,7 +44,10 @@
 	
 	return self;
 }
-
+//(void)getWordsToRemember
+//{
+//	
+//}
 
 
 @end
