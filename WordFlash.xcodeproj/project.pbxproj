@@ -16,6 +16,7 @@
 		01FC2EA117B881A000540B0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FC2E9F17B8819800540B0D /* QuartzCore.framework */; };
 		01FC2EA217B89C5A00540B0D /* WFWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B776017B862BD007C2925 /* WFWordController.m */; };
 		28DC5E4417B864CD002FDCBB /* WFword.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E4317B864CD002FDCBB /* WFword.m */; };
+		28DC5E4717B9ACED002FDCBB /* WFScoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E4617B9ACED002FDCBB /* WFScoreManager.m */; };
 		67A71D2317B844AE0010DDE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2217B844AE0010DDE1 /* UIKit.framework */; };
 		67A71D2517B844AE0010DDE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2417B844AE0010DDE1 /* Foundation.framework */; };
 		67A71D2717B844AE0010DDE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2617B844AE0010DDE1 /* CoreGraphics.framework */; };
@@ -46,6 +47,8 @@
 		28DC5E3B17B85C4F002FDCBB /* WFWordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWordListViewController.m; sourceTree = "<group>"; };
 		28DC5E4217B864CD002FDCBB /* WFword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFword.h; sourceTree = "<group>"; };
 		28DC5E4317B864CD002FDCBB /* WFword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFword.m; sourceTree = "<group>"; };
+		28DC5E4517B9ACED002FDCBB /* WFScoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFScoreManager.h; sourceTree = "<group>"; };
+		28DC5E4617B9ACED002FDCBB /* WFScoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFScoreManager.m; sourceTree = "<group>"; };
 		67A71D1F17B844AE0010DDE1 /* WordFlash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFlash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A71D2217B844AE0010DDE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		67A71D2417B844AE0010DDE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +89,8 @@
 				28DC5E4317B864CD002FDCBB /* WFword.m */,
 				018B775F17B862BD007C2925 /* WFWordController.h */,
 				018B776017B862BD007C2925 /* WFWordController.m */,
+				28DC5E4517B9ACED002FDCBB /* WFScoreManager.h */,
+				28DC5E4617B9ACED002FDCBB /* WFScoreManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				018B776917B871D8007C2925 /* WFWordListViewController.m in Sources */,
 				018B779F17B87869007C2925 /* UIButton+ExtraFactory.m in Sources */,
 				01FC2EA217B89C5A00540B0D /* WFWordController.m in Sources */,
+				28DC5E4717B9ACED002FDCBB /* WFScoreManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
