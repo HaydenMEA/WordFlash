@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		018B775B17B86031007C2925 /* WFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B775A17B86031007C2925 /* WFGameViewController.m */; };
-		018B776317B862BD007C2925 /* WFWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B776017B862BD007C2925 /* WFWordController.m */; };
 		018B776717B8687D007C2925 /* WFArrowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B776617B8687D007C2925 /* WFArrowViewController.m */; };
 		018B776817B86B53007C2925 /* WFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */; };
 		018B776917B871D8007C2925 /* WFWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3B17B85C4F002FDCBB /* WFWordListViewController.m */; };
 		018B779F17B87869007C2925 /* UIButton+ExtraFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B779E17B87869007C2925 /* UIButton+ExtraFactory.m */; };
 		01FC2E9E17B87B0000540B0D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FC2E9C17B87AF700540B0D /* CoreMotion.framework */; };
 		01FC2EA117B881A000540B0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FC2E9F17B8819800540B0D /* QuartzCore.framework */; };
+		01FC2EA217B89C5A00540B0D /* WFWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B776017B862BD007C2925 /* WFWordController.m */; };
 		28DC5E4417B864CD002FDCBB /* WFword.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E4317B864CD002FDCBB /* WFword.m */; };
 		67A71D2317B844AE0010DDE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2217B844AE0010DDE1 /* UIKit.framework */; };
 		67A71D2517B844AE0010DDE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A71D2417B844AE0010DDE1 /* Foundation.framework */; };
@@ -260,11 +260,11 @@
 				67A71D5A17B8473F0010DDE1 /* WFAppDelegate.m in Sources */,
 				28DC5E4417B864CD002FDCBB /* WFword.m in Sources */,
 				018B775B17B86031007C2925 /* WFGameViewController.m in Sources */,
-				018B776317B862BD007C2925 /* WFWordController.m in Sources */,
 				018B776717B8687D007C2925 /* WFArrowViewController.m in Sources */,
 				018B776817B86B53007C2925 /* WFRootViewController.m in Sources */,
 				018B776917B871D8007C2925 /* WFWordListViewController.m in Sources */,
 				018B779F17B87869007C2925 /* UIButton+ExtraFactory.m in Sources */,
+				01FC2EA217B89C5A00540B0D /* WFWordController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

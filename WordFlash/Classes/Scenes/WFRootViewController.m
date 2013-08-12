@@ -38,6 +38,11 @@
 	[self.view addSubview:_wordListVC.view];
 	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:2];
 	[_gameVC.view removeFromSuperview];
+
+	CGFloat width = self.view.frame.size.width;
+	CGFloat height = self.view.frame.size.height;
+	
+	NSLog(@"%f, %f",width , height);
 	
 
 }

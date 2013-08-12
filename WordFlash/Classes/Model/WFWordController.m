@@ -51,6 +51,7 @@
 	for(int x=0; x<5; x++)
 	{
 	int indexNumberToUse = arc4random() %wordSelection.count; //--select words to use from the dictionary
+		
 	[selectedWords addObject:wordSelection[indexNumberToUse]]; 
 	[wordSelection removeObject:wordSelection[indexNumberToUse]];//- populate the set with the words from the array
 		 }
