@@ -7,13 +7,7 @@
 //
 
 #import "WFWordController.h"
-#import "WFWordList.h"
 
-@interface WFWordList ();
-
-
-
-@end
 
 
 @implementation WFWordController
@@ -38,7 +32,7 @@
 	{
 		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee"];
 		[strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-			WFWord *word = [NSArray alloc] initWithObjects:(id), obj, nil;
+//			WFWord *word = [NSArray alloc] initWithObjects:(id), obj, nil;
 			
 		}];
 	}
