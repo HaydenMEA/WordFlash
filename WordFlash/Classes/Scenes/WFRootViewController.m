@@ -9,12 +9,13 @@
 #import "WFRootViewController.h"
 #import "WFWordListViewController.h"
 #import "WFGameViewController.h"
+#import "WFScoreViewController.h"
 
 @interface WFRootViewController ()
 
 @property (nonatomic, strong)WFWordListViewController *wordListVC;
 @property (nonatomic, strong)WFGameViewController *gameVC;
-//@property (nonatomic, strong)WFScoreViewController *scoreVC;
+@property (nonatomic, strong)WFScoreViewController *scoreVC;
 
 @end
 
@@ -38,8 +39,8 @@
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
 	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:2];
-	[_wordListVC.view removeFromSuperview];
-//	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:30];
+	
+	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:3];
 
 	
 	CGFloat width = self.view.frame.size.width;
@@ -56,13 +57,15 @@
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_gameVC = [storyboard instantiateViewControllerWithIdentifier:@"WFGameViewController"];
 	[self.view addSubview:_gameVC.view];
+	[_wordListVC.view removeFromSuperview];
 }
 
 - (IBAction)scoreViewAction:(id)sender
 {
-//	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
-//	_scoreVC = [storyboard instantiateViewControllerWithIdentifier:@"WFGameViewController"];
-//	[self.view addSubview:_scoreVC.view];
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+	_scoreVC = [storyboard instantiateViewControllerWithIdentifier:@"WFScoreViewController"];
+	[self.view addSubview:_scoreVC.view];
+
 }
 
 
