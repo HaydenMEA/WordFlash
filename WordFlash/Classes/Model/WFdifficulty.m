@@ -29,9 +29,9 @@
 +(WFdifficulty *)easy
 {
 	WFdifficulty *difficulty = [[WFdifficulty alloc] init];
-	difficulty.numberOfWords = 8;
+	difficulty.numberOfWords = 4;
 	difficulty.displayTime = 3;
-	difficulty.fallRate = 0.75;
+	difficulty.fallRate = 0.5;
 	difficulty.gameTime = 30;
 	
 	return difficulty;
@@ -39,7 +39,7 @@
 +(WFdifficulty *)medium
 {
 	WFdifficulty *difficulty = [[WFdifficulty alloc] init];
-	difficulty.numberOfWords = 12;
+	difficulty.numberOfWords = 10;
 	difficulty.displayTime = 2;
 	difficulty.fallRate = 1.00;
 	difficulty.gameTime = 25;
