@@ -30,7 +30,7 @@
 {
 	WFdifficulty *difficulty = [[WFdifficulty alloc] init];
 	difficulty.numberOfWords = 8;
-	difficulty.displayTime = 20;
+	difficulty.displayTime = 3;
 	difficulty.fallRate = 0.75;
 	difficulty.gameTime = 30;
 	
@@ -40,7 +40,7 @@
 {
 	WFdifficulty *difficulty = [[WFdifficulty alloc] init];
 	difficulty.numberOfWords = 12;
-	difficulty.displayTime = 20;
+	difficulty.displayTime = 2;
 	difficulty.fallRate = 1.00;
 	difficulty.gameTime = 25;
 	
@@ -50,7 +50,7 @@
 {
 	WFdifficulty *difficulty = [[WFdifficulty alloc] init];
 	difficulty.numberOfWords = 15;
-	difficulty.displayTime = 15;
+	difficulty.displayTime = 1;
 	difficulty.fallRate = 1.25;
 	difficulty.gameTime = 20;
 	

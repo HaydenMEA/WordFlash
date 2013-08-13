@@ -31,8 +31,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	UIImage *image = [UIImage imageNamed:@"background.png"];
 	self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-//	CGRect frame = CGRectMake(0, 0, image.size.width, image.size.height);
-//	self.view = [[UIView alloc]initWithFrame:frame];
+	//	CGRect frame = CGRectMake(0, 0, image.size.width, image.size.height);
+	//	self.view = [[UIView alloc]initWithFrame:frame];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,19 +49,19 @@
 	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:2];
 	
 	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:9];
-
+	
 	
 	CGFloat width = self.view.frame.size.width;
 	CGFloat height = self.view.frame.size.height;
 	
 	NSLog(@"%f, %f",width , height);
 	
-
+	
 }
 
 - (IBAction)gameViewAction:(id)sender
 {
-
+	
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_gameVC = [storyboard instantiateViewControllerWithIdentifier:@"WFGameViewController"];
 	[self.view addSubview:_gameVC.view];
@@ -73,12 +73,12 @@
 - (IBAction)startEasy:(id)sender
 {
 	
-	NSObject *level = [WFdifficulty easy];
+	_level = [WFdifficulty easy];
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
-	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:2];
-	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:9];
+	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:_level.displayTime];
+	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:_level.gameTime];
 	
 	CGFloat width = self.view.frame.size.width;
 	CGFloat height = self.view.frame.size.height;
@@ -87,10 +87,36 @@
 	
 }
 
-- (IBAction)startMedium:(id)sender {
+- (IBAction)startMedium:(id)sender
+{
+	
+	_level = [WFdifficulty medium];
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
+	[self.view addSubview:_wordListVC.view];
+	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:_level.displayTime];
+	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:_level.gameTime];
+	
+	CGFloat width = self.view.frame.size.width;
+	CGFloat height = self.view.frame.size.height;
+	
+	NSLog(@"%f, %f",width , height);
 }
 
-- (IBAction)startHard:(id)sender {
+- (IBAction)startHard:(id)sender
+{
+	
+	_level = [WFdifficulty hard];
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
+	[self.view addSubview:_wordListVC.view];
+	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:_level.displayTime];
+	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:_level.gameTime];
+	
+	CGFloat width = self.view.frame.size.width;
+	CGFloat height = self.view.frame.size.height;
+	
+	NSLog(@"%f, %f",width , height);
 }
 
 - (IBAction)scoreViewAction:(id)sender
@@ -98,7 +124,7 @@
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_scoreVC = [storyboard instantiateViewControllerWithIdentifier:@"WFScoreViewController"];
 	[self.view addSubview:_scoreVC.view];
-
+	
 }
 
 
