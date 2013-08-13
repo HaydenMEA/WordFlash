@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *arrow;
 
 
+- (void)setImage:(UIImage *)image forState:(UIControlState)state;
+
 @end

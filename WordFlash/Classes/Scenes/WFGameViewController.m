@@ -54,7 +54,11 @@
 		
 		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:@selector(wordTappedAction:)event:UIControlEventTouchDown];
 		button.tag = i;
+		[button setBackgroundImage:[UIImage imageNamed:@"scroll.png"] forState:UIControlStateNormal];
+		button.titleLabel.textColor = [UIColor whiteColor];
 		
+//		UIImage *image [[UIImage alloc] initWithCGImage:scroll.png];
+//		button setImage:image forState:UIControlStateNormal;
 
 		[self.view insertSubview:button atIndex:0];
 		[self randomizeCenter:button];
