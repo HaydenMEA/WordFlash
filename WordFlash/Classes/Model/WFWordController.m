@@ -11,7 +11,10 @@
 #import "WFdifficulty.h"
 
 
+@interface WFWordController ()
+@property (nonatomic, strong) WFdifficulty *level;
 
+@end
 @implementation WFWordController
 
 
@@ -32,48 +35,51 @@
 	self = [super init];
 	if(self)
 	{
-		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"Weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee", @"Audion", @"Anatidaephobia", @"Agateophobia"];
-		
-		NSMutableArray *wordsM = [[NSMutableArray alloc] init];
-
-		[strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-			WFword *word = [[WFword alloc] init];
-			word.string = obj;
-			int minSpeed = 3;
-			int maxSpeed = 6;
-			int variableSpeed = 50;
-			if
-				((variableSpeed / [obj length]) < minSpeed)	//--give each word different speeds based on length
-				word.speed = minSpeed;
-			else if
-				(variableSpeed / [obj length] > maxSpeed)
-				word.speed = maxSpeed;
-			else
-				(word.speed = variableSpeed / [obj length]);
-			[wordsM addObject:word];
-		}];
-		_words = wordsM;
 	}
 	
 	return self;
 }
 
+- (void)loadWordsWithSpeedModifier:(CGFloat)speedModifer
+{
+	NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"Weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee", @"Audion", @"Anatidaephobia", @"Agateophobia", @"Duck", @"Bird", @"Insane"];
+	
+	NSMutableArray *wordsM = [[NSMutableArray alloc] init];
+	
+	[strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		WFword *word = [[WFword alloc] init];
+		word.string = obj;
+		int minSpeed = 3;
+		int maxSpeed = 6;
+		int variableSpeed = 50;
+		if
+			((variableSpeed / [obj length]) < minSpeed)	//--give each word different speeds based on length
+			word.speed = minSpeed;
+		else if
+			(variableSpeed / [obj length] > maxSpeed)
+			word.speed = maxSpeed;
+		else
+			(word.speed = variableSpeed / [obj length]);
+		word.speed *= speedModifer;
+		[wordsM addObject:word];
+	}];
+	_words = wordsM;
 
+}
 
-
--(NSArray *)getWordsToRemember
+-(void)createWords:(NSInteger)numberOfWords
 {
 	NSMutableArray *selectedWords = [[NSMutableArray alloc] init];	//Create a set to hold a selection of words
 	NSMutableArray *wordSelection = [[NSMutableArray alloc] initWithArray:_words];
-	for(int x=0; x<5 /* get from difficulty */; x++)
+	for(int x=0; x< numberOfWords /* get from difficulty */; x++)
 	{
-	int indexNumberToUse = arc4random() %wordSelection.count; //--select words to use from the dictionary
+		int indexNumberToUse = arc4random() %wordSelection.count; //--select words to use from the dictionary
 		
-	[selectedWords addObject:wordSelection[indexNumberToUse]]; 
-	[wordSelection removeObject:wordSelection[indexNumberToUse]];//- populate the set with the words from the array
-		 }
+		[selectedWords addObject:wordSelection[indexNumberToUse]];
+		[wordSelection removeObject:wordSelection[indexNumberToUse]];//- populate the set with the words from the array
+	}
 	
-	return selectedWords;
+	_selectedWords = selectedWords;
 }
 
 - (BOOL)containsWord:(WFword *)word		//--checks if the word existed in selected words

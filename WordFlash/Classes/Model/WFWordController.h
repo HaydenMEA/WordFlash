@@ -18,8 +18,10 @@
 @property(nonatomic, strong) NSArray *selectedWords;
 
 +(WFWordController *)defaultManager;
--(NSArray *)getWordsToRemember;
 - (BOOL)containsWord:(WFword *)word;
 
+- (void)loadWordsWithSpeedModifier:(CGFloat)speedModifer;
+
+-(void)createWords:(NSInteger)numberOfWords;
 
 @end

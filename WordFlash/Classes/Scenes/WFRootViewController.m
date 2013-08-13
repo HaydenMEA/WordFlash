@@ -11,6 +11,7 @@
 #import "WFGameViewController.h"
 #import "WFScoreViewController.h"
 #import "WFdifficulty.h"
+#import "WFWordController.h"
 
 @interface WFRootViewController ()
 
@@ -19,6 +20,7 @@
 @property (nonatomic, strong)WFScoreViewController *scoreVC;
 @property (nonatomic, strong)WFdifficulty *difficulty;
 @property (nonatomic, strong)WFdifficulty *level;
+@property (nonatomic, strong)WFWordController *gameLevel;
 
 
 @end
@@ -74,6 +76,9 @@
 {
 	
 	_level = [WFdifficulty easy];
+	_gameLevel = [WFWordController  defaultManager];
+	[_gameLevel loadWordsWithSpeedModifier:_level.fallRate];
+	[_gameLevel createWords:_level.numberOfWords];
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
@@ -91,6 +96,10 @@
 {
 	
 	_level = [WFdifficulty medium];
+	_gameLevel = [WFWordController  defaultManager];
+	[_gameLevel loadWordsWithSpeedModifier:_level.fallRate];
+	[_gameLevel createWords:_level.numberOfWords];
+	
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
@@ -107,6 +116,9 @@
 {
 	
 	_level = [WFdifficulty hard];
+	_gameLevel = [WFWordController  defaultManager];
+	[_gameLevel loadWordsWithSpeedModifier:_level.fallRate];
+	[_gameLevel createWords:_level.numberOfWords];
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];

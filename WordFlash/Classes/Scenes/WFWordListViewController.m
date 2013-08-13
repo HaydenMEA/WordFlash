@@ -8,10 +8,12 @@
 
 #import "WFWordListViewController.h"
 #import "WFWordController.h"
+#import "WFdifficulty.h"
 
 @interface WFWordListViewController ()
 @property (nonatomic, strong) WFWordController *wordController;
 @property (nonatomic, strong) NSArray *words;
+@property (nonatomic, strong) WFdifficulty *level;
 
 @end
 
@@ -32,10 +34,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 	
-	
 	_wordController = [WFWordController defaultManager];
-	_wordController.selectedWords = [_wordController getWordsToRemember];
-
 	
 }
 
