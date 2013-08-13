@@ -12,12 +12,16 @@
 
 +(UIButton *)buttonWithTitle:(NSString *)title target:(id)target selector:(SEL)selector
 {
+	return [UIButton buttonWithTitle:title target:target selector:selector event:UIControlEventTouchUpInside];
+}
+
++ (UIButton *)buttonWithTitle:(NSString *)title target:(id)target selector:(SEL)selector event:(UIControlEvents)event
+{
 	UIButton *button =[UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[button setTitle:title forState:(UIControlStateNormal)];
 	[button sizeToFit];
-	[button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+	[button addTarget:target action:selector forControlEvents:event];
 	
 	return button;
 }
-
 @end

@@ -12,5 +12,5 @@
 
 + (UIButton *)buttonWithTitle:(NSString *)title target:(id)target selector:(SEL)selector;
 
-
++ (UIButton *)buttonWithTitle:(NSString *)title target:(id)target selector:(SEL)selector event:(UIControlEvents)event;
 @end
