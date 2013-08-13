@@ -15,6 +15,7 @@
 		01FC2E9E17B87B0000540B0D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FC2E9C17B87AF700540B0D /* CoreMotion.framework */; };
 		01FC2EA117B881A000540B0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FC2E9F17B8819800540B0D /* QuartzCore.framework */; };
 		01FC2EA217B89C5A00540B0D /* WFWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B776017B862BD007C2925 /* WFWordController.m */; };
+		01FC2EA517B9C5F700540B0D /* WFScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC2EA417B9C5F700540B0D /* WFScoreViewController.m */; };
 		28DC5E4417B864CD002FDCBB /* WFword.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E4317B864CD002FDCBB /* WFword.m */; };
 		28DC5E4717B9ACED002FDCBB /* WFScoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E4617B9ACED002FDCBB /* WFScoreManager.m */; };
 		67A0EA3317B9B07B00CB2A56 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 67A0EA2C17B9B07B00CB2A56 /* arrow.png */; };
@@ -47,6 +48,8 @@
 		018B779E17B87869007C2925 /* UIButton+ExtraFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ExtraFactory.m"; sourceTree = "<group>"; };
 		01FC2E9C17B87AF700540B0D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		01FC2E9F17B8819800540B0D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		01FC2EA317B9C5F700540B0D /* WFScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFScoreViewController.h; sourceTree = "<group>"; };
+		01FC2EA417B9C5F700540B0D /* WFScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFScoreViewController.m; sourceTree = "<group>"; };
 		28DC5E3817B85C4F002FDCBB /* WFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFRootViewController.h; sourceTree = "<group>"; };
 		28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFRootViewController.m; sourceTree = "<group>"; };
 		28DC5E3A17B85C4F002FDCBB /* WFWordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWordListViewController.h; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				018B775A17B86031007C2925 /* WFGameViewController.m */,
 				018B776517B8687D007C2925 /* WFArrowViewController.h */,
 				018B776617B8687D007C2925 /* WFArrowViewController.m */,
+				01FC2EA317B9C5F700540B0D /* WFScoreViewController.h */,
+				01FC2EA417B9C5F700540B0D /* WFScoreViewController.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				018B779F17B87869007C2925 /* UIButton+ExtraFactory.m in Sources */,
 				01FC2EA217B89C5A00540B0D /* WFWordController.m in Sources */,
 				28DC5E4717B9ACED002FDCBB /* WFScoreManager.m in Sources */,
+				01FC2EA517B9C5F700540B0D /* WFScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

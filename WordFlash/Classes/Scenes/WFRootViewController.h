@@ -14,4 +14,5 @@
 
 - (IBAction)gameViewAction:(id)sender;
 
+- (IBAction)scoreViewAction:(id)sender;
 @end

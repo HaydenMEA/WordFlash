@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong)WFWordListViewController *wordListVC;
 @property (nonatomic, strong)WFGameViewController *gameVC;
+@property (nonatomic, strong)WFScoreViewController *scoreVC;
 
 @end
 
@@ -37,8 +38,10 @@
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
 	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:2];
-	[_gameVC.view removeFromSuperview];
+	[_wordListVC.view removeFromSuperview];
+	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:30];
 
+	
 	CGFloat width = self.view.frame.size.width;
 	CGFloat height = self.view.frame.size.height;
 	
@@ -54,5 +57,13 @@
 	_gameVC = [storyboard instantiateViewControllerWithIdentifier:@"WFGameViewController"];
 	[self.view addSubview:_gameVC.view];
 }
+
+- (IBAction)scoreViewAction:(id)sender
+{
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+	_scoreVC = [storyboard instantiateViewControllerWithIdentifier:@"WFGameViewController"];
+	[self.view addSubview:_scoreVC.view];
+}
+
 
 @end
