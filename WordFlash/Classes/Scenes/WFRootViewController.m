@@ -25,6 +25,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	UIImage *image = [UIImage imageNamed:@"background.png"];
+	self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+//	CGRect frame = CGRectMake(0, 0, image.size.width, image.size.height);
+//	self.view = [[UIView alloc]initWithFrame:frame];
 }
 
 - (void)didReceiveMemoryWarning

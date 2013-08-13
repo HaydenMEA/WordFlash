@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0148CE4C17BA3140001A558C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0148CE4A17BA313F001A558C /* background.png */; };
+		0148CE4D17BA3140001A558C /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0148CE4B17BA313F001A558C /* background@2x.png */; };
 		018B775B17B86031007C2925 /* WFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B775A17B86031007C2925 /* WFGameViewController.m */; };
 		018B776717B8687D007C2925 /* WFArrowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B776617B8687D007C2925 /* WFArrowViewController.m */; };
 		018B776817B86B53007C2925 /* WFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0148CE4A17BA313F001A558C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		0148CE4B17BA313F001A558C /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		018B775917B86031007C2925 /* WFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFGameViewController.h; sourceTree = "<group>"; };
 		018B775A17B86031007C2925 /* WFGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFGameViewController.m; sourceTree = "<group>"; };
 		018B775F17B862BD007C2925 /* WFWordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWordController.h; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 		67A0EA3017B9B07B00CB2A56 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0148CE4A17BA313F001A558C /* background.png */,
+				0148CE4B17BA313F001A558C /* background@2x.png */,
 				67A0EA3117B9B07B00CB2A56 /* scroll.png */,
 				67A0EA3217B9B07B00CB2A56 /* scroll@2x.png */,
 			);
@@ -301,6 +307,8 @@
 				67A0EA3617B9B07B00CB2A56 /* target@2x.png in Resources */,
 				67A0EA3717B9B07B00CB2A56 /* scroll.png in Resources */,
 				67A0EA3817B9B07B00CB2A56 /* scroll@2x.png in Resources */,
+				0148CE4C17BA3140001A558C /* background.png in Resources */,
+				0148CE4D17BA3140001A558C /* background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
