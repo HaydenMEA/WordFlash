@@ -8,6 +8,7 @@
 
 #import "WFScoreManager.h"
 
+
 @implementation WFScoreManager
 
 
@@ -36,7 +37,8 @@
 
 -(void)increaseScore:(NSInteger)score
 {
-	_score += score;
+	_score += 1; //score;
+//	score += 1;
 //	_labelScore.text = [NSString stringWithFormat:@"score %i", _score];
 }
 

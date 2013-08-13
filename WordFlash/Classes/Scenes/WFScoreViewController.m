@@ -7,8 +7,11 @@
 //
 
 #import "WFScoreViewController.h"
+#import "WFScoreManager.h"
 
 @interface WFScoreViewController ()
+
+@property (nonatomic, strong)WFScoreManager *scoreManager;
 
 @end
 
@@ -27,6 +30,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	_scoreManager = [WFScoreManager defaultManager];
+	
+	_scoreAcheived.text = [NSString stringWithFormat:@"%i",(int)_scoreManager.score];
+	
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +41,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface WFScoreManager : NSObject
-@property(nonatomic, assign)NSInteger *score;
-@property (nonatomic, strong) UILabel *labelScore;
+@property(nonatomic, assign)NSInteger score;
+//@property (nonatomic, strong) UILabel *labelScore;
 
 
 +(WFScoreManager *)defaultManager;

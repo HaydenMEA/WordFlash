@@ -40,7 +40,7 @@
 	[self.view addSubview:_wordListVC.view];
 	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:2];
 	
-	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:3];
+	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:9];
 
 	
 	CGFloat width = self.view.frame.size.width;

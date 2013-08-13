@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface WFScoreViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *scoreAcheived;
+@property (weak, nonatomic) IBOutlet UILabel *scoreAttainable;
+
+
 
 @end

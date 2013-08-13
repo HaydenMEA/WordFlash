@@ -169,8 +169,69 @@
                     <view key="view" contentMode="scaleToFill" id="pe2-oz-Vdt">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Congratulations!! " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxj-FI-URe">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="KdI-yf-jia"/>
+                                    <constraint firstAttribute="height" constant="102" id="e9u-9V-UYz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You Got" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMA-vG-nwl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="I0T-dV-w8p"/>
+                                    <constraint firstAttribute="width" constant="96" id="IvP-oT-7OT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Puh-tv-tpv">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="TCO-sR-sLC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="64"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPx-tq-6SM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="MBN-Oz-raC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="64"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzB-OS-8Ih">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="DQS-9k-rF8"/>
+                                    <constraint firstAttribute="height" constant="116" id="EpU-W4-lcW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="96"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lxj-FI-URe" firstAttribute="top" secondItem="pe2-oz-Vdt" secondAttribute="top" constant="88" id="7IN-Fv-coA"/>
+                            <constraint firstAttribute="bottom" secondItem="KzB-OS-8Ih" secondAttribute="bottom" constant="86" id="CTI-Uh-gMv"/>
+                            <constraint firstItem="BPx-tq-6SM" firstAttribute="leading" secondItem="pe2-oz-Vdt" secondAttribute="leading" constant="76" id="CkR-SP-WX1"/>
+                            <constraint firstItem="Lxj-FI-URe" firstAttribute="leading" secondItem="pe2-oz-Vdt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="K93-P7-fJA"/>
+                            <constraint firstItem="qMA-vG-nwl" firstAttribute="centerX" secondItem="Lxj-FI-URe" secondAttribute="centerX" type="default" id="WUO-LY-8VS"/>
+                            <constraint firstAttribute="trailing" secondItem="Puh-tv-tpv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jUK-4B-gTT"/>
+                            <constraint firstItem="KzB-OS-8Ih" firstAttribute="leading" secondItem="pe2-oz-Vdt" secondAttribute="leading" constant="150" id="kwn-Vz-hN3"/>
+                            <constraint firstItem="BPx-tq-6SM" firstAttribute="baseline" secondItem="Puh-tv-tpv" secondAttribute="baseline" type="default" id="paQ-oO-mRo"/>
+                            <constraint firstItem="qMA-vG-nwl" firstAttribute="top" secondItem="Lxj-FI-URe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qpT-MF-MJK"/>
+                            <constraint firstAttribute="bottom" secondItem="BPx-tq-6SM" secondAttribute="bottom" constant="107" id="wth-tr-tk8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreAcheived" destination="BPx-tq-6SM" id="t17-OR-Zca"/>
+                        <outlet property="scoreAttainable" destination="Puh-tv-tpv" id="Fub-Ga-mw6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOR-VB-YhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

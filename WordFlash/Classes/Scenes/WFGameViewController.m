@@ -10,6 +10,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import "WFWordController.h"
 #import "WFword.h"
+#import "WFScoreManager.h"
 
 
 @interface WFGameViewController ()
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) WFWordController *wordController;
 @property (nonatomic, strong) NSArray *words;
 @property (nonatomic, strong) NSMutableArray *buttonMutable;
+@property (nonatomic, strong) WFScoreManager *scoreManager;
 
 
 
@@ -41,6 +43,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 	_wordController = [WFWordController defaultManager];
+	_scoreManager = [WFScoreManager defaultManager];
+	
 	NSLog(@"%@", _wordController.words);
 	_buttonMutable = [[NSMutableArray alloc] init];
 	
@@ -82,6 +86,7 @@
 		 }];
 		
 		[button removeFromSuperview];
+		[_scoreManager increaseScore:1];
 	}
 	else
 	{
