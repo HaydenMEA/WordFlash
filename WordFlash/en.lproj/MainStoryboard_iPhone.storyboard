@@ -196,7 +196,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPx-tq-6SM">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="X" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPx-tq-6SM">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="91" id="MBN-Oz-raC"/>
                                 </constraints>
@@ -216,15 +216,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KzB-OS-8Ih" firstAttribute="leading" secondItem="BPx-tq-6SM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4VA-Zm-lGR"/>
                             <constraint firstItem="Lxj-FI-URe" firstAttribute="top" secondItem="pe2-oz-Vdt" secondAttribute="top" constant="88" id="7IN-Fv-coA"/>
                             <constraint firstAttribute="bottom" secondItem="KzB-OS-8Ih" secondAttribute="bottom" constant="86" id="CTI-Uh-gMv"/>
-                            <constraint firstItem="BPx-tq-6SM" firstAttribute="leading" secondItem="pe2-oz-Vdt" secondAttribute="leading" constant="76" id="CkR-SP-WX1"/>
                             <constraint firstItem="Lxj-FI-URe" firstAttribute="leading" secondItem="pe2-oz-Vdt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="K93-P7-fJA"/>
                             <constraint firstItem="qMA-vG-nwl" firstAttribute="centerX" secondItem="Lxj-FI-URe" secondAttribute="centerX" type="default" id="WUO-LY-8VS"/>
-                            <constraint firstAttribute="trailing" secondItem="Puh-tv-tpv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jUK-4B-gTT"/>
-                            <constraint firstItem="KzB-OS-8Ih" firstAttribute="leading" secondItem="pe2-oz-Vdt" secondAttribute="leading" constant="150" id="kwn-Vz-hN3"/>
                             <constraint firstItem="BPx-tq-6SM" firstAttribute="baseline" secondItem="Puh-tv-tpv" secondAttribute="baseline" type="default" id="paQ-oO-mRo"/>
                             <constraint firstItem="qMA-vG-nwl" firstAttribute="top" secondItem="Lxj-FI-URe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qpT-MF-MJK"/>
+                            <constraint firstItem="BPx-tq-6SM" firstAttribute="leading" secondItem="pe2-oz-Vdt" secondAttribute="leading" constant="51" id="rBs-V5-aJo"/>
+                            <constraint firstAttribute="trailing" secondItem="Puh-tv-tpv" secondAttribute="trailing" constant="42" id="u3B-2Z-039"/>
                             <constraint firstAttribute="bottom" secondItem="BPx-tq-6SM" secondAttribute="bottom" constant="107" id="wth-tr-tk8"/>
                         </constraints>
                     </view>
@@ -242,6 +242,35 @@
         <image name="arrow.png" width="240" height="40"/>
         <image name="target.png" width="250" height="300"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="WFGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFGameViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="WFRootViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFRootViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="gameViewAction:"/>
+                <relationship kind="action" name="scoreViewAction:"/>
+                <relationship kind="action" name="startButton:"/>
+            </relationships>
+        </class>
+        <class className="WFScoreViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFScoreViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scoreAcheived" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scoreAttainable" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="WFWordListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFWordListViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

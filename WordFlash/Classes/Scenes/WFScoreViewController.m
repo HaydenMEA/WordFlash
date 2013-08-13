@@ -8,10 +8,12 @@
 
 #import "WFScoreViewController.h"
 #import "WFScoreManager.h"
+#import "WFWordController.h"
 
 @interface WFScoreViewController ()
 
 @property (nonatomic, strong)WFScoreManager *scoreManager;
+@property (nonatomic, strong)WFWordController *wordController;
 
 @end
 
@@ -31,8 +33,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 	_scoreManager = [WFScoreManager defaultManager];
+	_wordController = [WFWordController defaultManager];
 	
 	_scoreAcheived.text = [NSString stringWithFormat:@"%i",(int)_scoreManager.score];
+	_scoreAttainable.text = [NSString stringWithFormat:@"%i",(int)[_wordController.selectedWords count]];
 	
 }
 
