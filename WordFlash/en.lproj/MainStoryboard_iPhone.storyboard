@@ -103,9 +103,6 @@
                             <constraint firstItem="H0w-dt-Xro" firstAttribute="baseline" secondItem="pau-dg-G1H" secondAttribute="baseline" type="default" id="vbz-rG-nik"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="view" destination="pau-dg-G1H" id="A6a-RV-fc1"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>

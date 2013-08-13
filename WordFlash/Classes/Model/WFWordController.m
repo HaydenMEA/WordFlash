@@ -8,6 +8,7 @@
 
 #import "WFWordController.h"
 #import "WFword.h"
+#import "WFdifficulty.h"
 
 
 
@@ -64,7 +65,7 @@
 {
 	NSMutableArray *selectedWords = [[NSMutableArray alloc] init];	//Create a set to hold a selection of words
 	NSMutableArray *wordSelection = [[NSMutableArray alloc] initWithArray:_words];
-	for(int x=0; x<5; x++)
+	for(int x=0; x<5 /* get from difficulty */; x++)
 	{
 	int indexNumberToUse = arc4random() %wordSelection.count; //--select words to use from the dictionary
 		
