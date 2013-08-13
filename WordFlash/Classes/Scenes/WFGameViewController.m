@@ -35,8 +35,6 @@
 }
 
 
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -49,7 +47,8 @@
 	for (int i = 0; i < _wordController.words.count; i++)
 	{
 		
-		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:nil];
+		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:@selector(wordTappedAction:)];
+		button.tag = i;
 		[self.view addSubview:button];
 		[self randomizeCenter:button];
 		[_buttonMutable addObject:button];
@@ -57,31 +56,43 @@
 	}
 	NSLog(@"%@",_buttonMutable);
 	
-	//	_testButton = [UIButton buttonWithTitle:[_wordController.words[2] string] target:self selector:nil];
-	//	[self.view addSubview:_testButton];
+	
 	
 	_displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(buttonMove:)];
 	[_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 	
 	
 }
+- (void)wordTappedAction:(UIButton *)button
+{
+	if ([_wordController containsWord:_wordController.words[button.tag]] == YES)
+	{
+		
+	}
+	else 
+	{
+		
+	}
+	
+}
+
 - (void)randomizeCenter:(UIButton *)button
 {
     int width = self.view.frame.size.width;
     int buttonWidth = button.frame.size.width;
-
-        int randomX = (arc4random() % width);
-        
-        if (randomX < buttonWidth * 0.5)
-        {
-            randomX += buttonWidth * 0.5;
-        }
-        
-        if (randomX > (width-buttonWidth *0.5))
-        {
-            randomX = width - buttonWidth * 0.5;
-        }
-        button.center = CGPointMake(randomX, 0-arc4random()%300);
+	
+	int randomX = (arc4random() % width);
+	
+	if (randomX < buttonWidth * 0.5)
+	{
+		randomX += buttonWidth * 0.5;
+	}
+	
+	if (randomX > (width-buttonWidth *0.5))
+	{
+		randomX = width - buttonWidth * 0.5;
+	}
+	button.center = CGPointMake(randomX, 0-arc4random()%300);
     
 }
 
@@ -98,8 +109,8 @@
 		button.center = CGPointMake(x, y);
 		if (button.center.y > self.view.frame.size.height)
 		{
-		[self randomizeCenter:button];
-		} 
+			[self randomizeCenter:button];
+		}
 	}
 	
 }
