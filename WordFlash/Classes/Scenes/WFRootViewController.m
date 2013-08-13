@@ -11,22 +11,15 @@
 #import "WFGameViewController.h"
 #import "WFScoreViewController.h"
 #import "WFdifficulty.h"
-<<<<<<< HEAD
-=======
-
->>>>>>> 032aa4d4b8c761f9fc44309b6eb397ff18ab6ec0
 
 @interface WFRootViewController ()
 
 @property (nonatomic, strong)WFWordListViewController *wordListVC;
 @property (nonatomic, strong)WFGameViewController *gameVC;
 @property (nonatomic, strong)WFScoreViewController *scoreVC;
-<<<<<<< HEAD
 @property (nonatomic, strong)WFdifficulty *difficulty;
-=======
 @property (nonatomic, strong)WFdifficulty *level;
 
->>>>>>> 032aa4d4b8c761f9fc44309b6eb397ff18ab6ec0
 
 @end
 
