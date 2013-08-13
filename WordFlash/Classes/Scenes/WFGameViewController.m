@@ -53,13 +53,25 @@
 	{
 		
 		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:@selector(wordTappedAction:)event:UIControlEventTouchDown];
-		button.tag = i;
-		[button setBackgroundImage:[UIImage imageNamed:@"scroll.png"] forState:UIControlStateNormal];
-		button.titleLabel.textColor = [UIColor whiteColor];
 		
-//		UIImage *image [[UIImage alloc] initWithCGImage:scroll.png];
-//		button setImage:image forState:UIControlStateNormal;
+		button.tag = i;
+		
+		UIImage *scrollImage = [UIImage imageNamed:@"scroll.png"];
+		CGFloat widthInset = scrollImage.size.width * 0.5 -1;
+		CGFloat heightInset = scrollImage.size.height * 0.5 -1;
+		UIEdgeInsets insets = UIEdgeInsetsMake(heightInset, widthInset, heightInset, widthInset);
+		scrollImage = [scrollImage resizableImageWithCapInsets:insets];
 
+		
+		[button setBackgroundImage:scrollImage forState:UIControlStateNormal];
+//		button.titleLabel.textColor = [UIColor whiteColor];
+		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//		button.titleLabel.font = [UIFont systemFontOfSize:20];
+		[button sizeToFit];
+		
+		//		UIImage *image [[UIImage alloc] initWithCGImage:scroll.png];
+		//		button setImage:image forState:UIControlStateNormal;
+		
 		[self.view insertSubview:button atIndex:0];
 		[self randomizeCenter:button];
 		[_buttonMutable addObject:button];
@@ -93,12 +105,19 @@
 		
 		[button removeFromSuperview];
 		[_scoreManager increaseScore:1];
+		NSLog(@"YES");
 	}
 	else
 	{
-		
+		for(int i = 0; i < self.buttonMutable.count; i++)
+		{
+			UIButton *button = _buttonMutable[i];
+			[self randomizeCenter:button];
+		 }
+		NSLog(@"NO");
+
 	}
-	
+
 }
 
 - (void)randomizeCenter:(UIButton *)button
