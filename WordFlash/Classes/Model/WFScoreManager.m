@@ -8,7 +8,6 @@
 
 #import "WFScoreManager.h"
 
-
 @implementation WFScoreManager
 
 

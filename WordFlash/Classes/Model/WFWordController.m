@@ -23,7 +23,7 @@
 	static __strong WFWordController *sharedInstance = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		sharedInstance = [[WFWordController alloc] init]; 		
+		sharedInstance = [[WFWordController alloc] init];
 	});
 	
 	return sharedInstance;
@@ -35,6 +35,27 @@
 	self = [super init];
 	if(self)
 	{
+		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"Weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee", @"Audion", @"Anatidaephobia", @"Agateophobia"];
+		
+		NSMutableArray *wordsM = [[NSMutableArray alloc] init];
+		
+		[strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+			WFword *word = [[WFword alloc] init];
+			word.string = obj;
+			int minSpeed = 3;
+			int maxSpeed = 6;
+			int variableSpeed = 50;
+			if
+				((variableSpeed / [obj length]) < minSpeed)	//--give each word different speeds based on length
+				word.speed = minSpeed;
+			else if
+				(variableSpeed / [obj length] > maxSpeed)
+				word.speed = maxSpeed;
+			else
+				(word.speed = variableSpeed / [obj length]);
+			[wordsM addObject:word];
+		}];
+		_words = wordsM;
 	}
 	
 	return self;

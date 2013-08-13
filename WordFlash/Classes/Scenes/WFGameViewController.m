@@ -53,26 +53,29 @@
 	{
 		
 		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:@selector(wordTappedAction:)event:UIControlEventTouchDown];
-		
+
+////------ KEEPING TRACK OF BUTTONS ------
+
 		button.tag = i;
+
+////------ ADDING A SCROLL IMAGE TO BUTTON ------
 		
 		UIImage *scrollImage = [UIImage imageNamed:@"scroll.png"];
 		CGFloat widthInset = scrollImage.size.width * 0.5 -1;
 		CGFloat heightInset = scrollImage.size.height * 0.5 -1;
 		UIEdgeInsets insets = UIEdgeInsetsMake(heightInset, widthInset, heightInset, widthInset);
 		scrollImage = [scrollImage resizableImageWithCapInsets:insets];
-
-		
 		[button setBackgroundImage:scrollImage forState:UIControlStateNormal];
-//		button.titleLabel.textColor = [UIColor whiteColor];
+		
+////------ SET COLOR OF BUTTON TEXT ------
+		
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//		button.titleLabel.font = [UIFont systemFontOfSize:20];
 		[button sizeToFit];
 		
-		//		UIImage *image [[UIImage alloc] initWithCGImage:scroll.png];
-		//		button setImage:image forState:UIControlStateNormal;
-		
 		[self.view insertSubview:button atIndex:0];
+
+////------ RANDOMIZE WHERE BUTTON SPAWNS ABOVE THE SCREEN ------
+		
 		[self randomizeCenter:button];
 		[_buttonMutable addObject:button];
 		
@@ -120,6 +123,9 @@
 
 }
 
+////------ RANDOMIZE WHERE BUTTON SPAWNS ABOVE THE SCREEN WITHIN THE WIDTH ------
+
+
 - (void)randomizeCenter:(UIButton *)button
 {
     int width = self.view.frame.size.width;
@@ -139,6 +145,8 @@
 	button.center = CGPointMake(randomX, 0-arc4random()%300);
     
 }
+
+////------ MAKE BUTTONS FALL DOWN THE SCREEN ------
 
 - (void)buttonMove:(CADisplayLink *)sender
 {

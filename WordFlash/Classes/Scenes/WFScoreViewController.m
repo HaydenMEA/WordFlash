@@ -9,11 +9,15 @@
 #import "WFScoreViewController.h"
 #import "WFScoreManager.h"
 #import "WFWordController.h"
+#import "WFRootViewController.h"
+#import "WFGameViewController.h"
 
 @interface WFScoreViewController ()
 
 @property (nonatomic, strong)WFScoreManager *scoreManager;
 @property (nonatomic, strong)WFWordController *wordController;
+@property (nonatomic, strong)WFRootViewController *rootVC;
+@property (nonatomic, strong)WFGameViewController *gameVC;
 
 @end
 
@@ -35,7 +39,12 @@
 	_scoreManager = [WFScoreManager defaultManager];
 	_wordController = [WFWordController defaultManager];
 	
+////------ SHOW SCORE ------
+	
 	_scoreAcheived.text = [NSString stringWithFormat:@"%i",(int)_scoreManager.score];
+	
+////------ SHOW TOTAL AVAILABLE ------
+	
 	_scoreAttainable.text = [NSString stringWithFormat:@"%i",(int)[_wordController.selectedWords count]];
 	
 }
@@ -47,5 +56,13 @@
 }
 
 
+////------ RESET BUTTON ------
 
+
+- (IBAction)resetAction:(id)sender
+{
+	[self.view removeFromSuperview];
+	[_gameVC.view removeFromSuperview];
+	NSLog(@"GAME RESET");
+}
 @end
