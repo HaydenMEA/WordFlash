@@ -9,5 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface WFScoreManager : NSObject
+@property(nonatomic, assign)NSInteger *score;
+
+
++(WFScoreManager *)defaultManager;
+
+-(void)increaseScore:(NSInteger)score;
+-(void)resetScore:(NSInteger)score;
+
 
 @end

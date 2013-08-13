@@ -14,7 +14,7 @@
 @implementation WFWordController
 
 
-+(WFWordController *)defaultManager
++(WFWordController *)defaultManager	//--create a singleton
 {
 	static __strong WFWordController *sharedInstance = nil;
 	static dispatch_once_t onceToken;
