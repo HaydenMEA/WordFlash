@@ -45,19 +45,67 @@
                                     <action selector="startButton:" destination="2" eventType="touchUpInside" id="P4H-8x-ur9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahj-n1-YPb">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Easy">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startEasy:" destination="2" eventType="touchUpInside" id="IrY-oR-0bF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pau-dg-G1H">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Medium">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startMedium:" destination="2" eventType="touchUpInside" id="Qli-4e-aC4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0w-dt-Xro">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Hard">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startHard:" destination="2" eventType="touchUpInside" id="e5C-XS-yfr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="p4Z-m8-hR1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="27" id="2H1-eO-EdY"/>
-                            <constraint firstItem="Ffl-Ry-jN6" firstAttribute="centerX" secondItem="gsX-Xy-WEJ" secondAttribute="centerX" type="default" id="LZe-Jl-Lkb"/>
-                            <constraint firstItem="gsX-Xy-WEJ" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="LsL-BJ-zBr"/>
+                            <constraint firstItem="pau-dg-G1H" firstAttribute="baseline" secondItem="ahj-n1-YPb" secondAttribute="baseline" type="default" id="WrY-LS-IFn"/>
+                            <constraint firstItem="Ffl-Ry-jN6" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="Y1k-rN-yqe"/>
+                            <constraint firstItem="ahj-n1-YPb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aOf-dw-PdG"/>
                             <constraint firstAttribute="trailing" secondItem="2Oz-9K-p0l" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aOs-VY-O8T"/>
                             <constraint firstItem="p4Z-m8-hR1" firstAttribute="centerY" secondItem="2Oz-9K-p0l" secondAttribute="centerY" type="default" id="bqc-73-F7y"/>
+                            <constraint firstItem="Ffl-Ry-jN6" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fxy-K3-m5e"/>
                             <constraint firstItem="gsX-Xy-WEJ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="115" id="kBw-QD-Mtv"/>
-                            <constraint firstAttribute="bottom" secondItem="Ffl-Ry-jN6" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="kf6-nA-wc4"/>
+                            <constraint firstAttribute="bottom" secondItem="ahj-n1-YPb" secondAttribute="bottom" constant="40" id="mHY-Vo-mMc"/>
+                            <constraint firstItem="Ffl-Ry-jN6" firstAttribute="centerX" secondItem="gsX-Xy-WEJ" secondAttribute="centerX" type="default" id="oUx-Di-ypn"/>
+                            <constraint firstAttribute="trailing" secondItem="H0w-dt-Xro" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pBA-5N-gJz"/>
+                            <constraint firstItem="pau-dg-G1H" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="115" id="u9x-br-v3Z"/>
                             <constraint firstAttribute="bottom" secondItem="2Oz-9K-p0l" secondAttribute="bottom" constant="113" id="vPt-oT-LKx"/>
+                            <constraint firstItem="H0w-dt-Xro" firstAttribute="baseline" secondItem="pau-dg-G1H" secondAttribute="baseline" type="default" id="vbz-rG-nik"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="view" destination="pau-dg-G1H" id="A6a-RV-fc1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>

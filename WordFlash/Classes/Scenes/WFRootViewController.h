@@ -12,7 +12,12 @@
 
 - (IBAction)startButton:(id)sender;
 
+- (IBAction)startEasy:(id)sender;
+- (IBAction)startMedium:(id)sender;
+- (IBAction)startHard:(id)sender;
+
 - (IBAction)gameViewAction:(id)sender;
+
 
 - (IBAction)scoreViewAction:(id)sender;
 @end
