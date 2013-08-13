@@ -118,7 +118,7 @@
 		UIButton *button = _buttonMutable[r];
 		
 		CGFloat x = button.center.x + 0;
-		CGFloat y = button.center.y + 2;//[_wordController.words[r]speed];
+		CGFloat y = button.center.y + [_wordController.words[r]speed];
 		
 		button.center = CGPointMake(x, y);
 		if (button.center.y > self.view.frame.size.height)
