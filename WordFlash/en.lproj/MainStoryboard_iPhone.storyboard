@@ -17,13 +17,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Oz-9K-p0l">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="target.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Oz-9K-p0l">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="9Ip-Bj-sY4"/>
                                     <constraint firstAttribute="height" constant="105" id="y0k-Cg-KlQ"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4Z-m8-hR1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="p4Z-m8-hR1">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="127" id="bFs-3I-FEG"/>
                                     <constraint firstAttribute="height" constant="89" id="fdG-05-uXL"/>
@@ -48,13 +48,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="p4Z-m8-hR1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="27" id="2H1-eO-EdY"/>
                             <constraint firstItem="Ffl-Ry-jN6" firstAttribute="centerX" secondItem="gsX-Xy-WEJ" secondAttribute="centerX" type="default" id="LZe-Jl-Lkb"/>
                             <constraint firstItem="gsX-Xy-WEJ" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="LsL-BJ-zBr"/>
-                            <constraint firstItem="p4Z-m8-hR1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TOP-km-cy5"/>
                             <constraint firstAttribute="trailing" secondItem="2Oz-9K-p0l" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aOs-VY-O8T"/>
+                            <constraint firstItem="p4Z-m8-hR1" firstAttribute="centerY" secondItem="2Oz-9K-p0l" secondAttribute="centerY" type="default" id="bqc-73-F7y"/>
                             <constraint firstItem="gsX-Xy-WEJ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="115" id="kBw-QD-Mtv"/>
                             <constraint firstAttribute="bottom" secondItem="Ffl-Ry-jN6" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="kf6-nA-wc4"/>
-                            <constraint firstAttribute="bottom" secondItem="p4Z-m8-hR1" secondAttribute="bottom" constant="84" id="nLt-Px-NUC"/>
                             <constraint firstAttribute="bottom" secondItem="2Oz-9K-p0l" secondAttribute="bottom" constant="113" id="vPt-oT-LKx"/>
                         </constraints>
                     </view>
@@ -121,19 +121,36 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCQ-59-ZOB">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="9ch-dG-GiR" kind="embed" id="yS1-wA-feV"/>
-                                </connections>
-                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rpm-26-0qT">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="target.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jc4-iP-Sk9">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="93" id="KfA-lK-ebr"/>
+                                            <constraint firstAttribute="height" constant="74" id="yqz-ep-dZb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="2dQ-xx-g86">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="106" id="E5Y-sm-Ghk"/>
+                                            <constraint firstAttribute="height" constant="14" id="ocd-5w-w1z"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.05374042424947556" blue="0.010319255918045167" alpha="0.17000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2dQ-xx-g86" firstAttribute="centerY" secondItem="Jc4-iP-Sk9" secondAttribute="centerY" type="default" id="7xW-Pc-ocr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jc4-iP-Sk9" secondAttribute="trailing" constant="30" id="FwR-63-wgZ"/>
+                                    <constraint firstAttribute="height" constant="141" type="user" id="QR9-zC-QVl"/>
+                                    <constraint firstItem="Jc4-iP-Sk9" firstAttribute="top" secondItem="Rpm-26-0qT" secondAttribute="top" constant="27" id="UfO-2X-yoh"/>
+                                    <constraint firstItem="2dQ-xx-g86" firstAttribute="leading" secondItem="Rpm-26-0qT" secondAttribute="leading" constant="8" id="ede-y9-EtQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="TCQ-59-ZOB" secondAttribute="bottom" constant="323" id="9yj-Qb-cYu"/>
-                            <constraint firstItem="TCQ-59-ZOB" firstAttribute="trailing" secondItem="kDY-oS-uxk" secondAttribute="trailing" type="default" id="Gxa-wO-Sgy"/>
-                            <constraint firstItem="TCQ-59-ZOB" firstAttribute="top" secondItem="kDY-oS-uxk" secondAttribute="top" constant="107" id="ZHO-fl-Jgh"/>
-                            <constraint firstItem="TCQ-59-ZOB" firstAttribute="leading" secondItem="kDY-oS-uxk" secondAttribute="leading" type="default" id="ZWE-GZ-S9A"/>
+                            <constraint firstItem="Rpm-26-0qT" firstAttribute="leading" secondItem="kDY-oS-uxk" secondAttribute="leading" type="default" id="9jf-pO-m9B"/>
+                            <constraint firstItem="Rpm-26-0qT" firstAttribute="trailing" secondItem="kDY-oS-uxk" secondAttribute="trailing" type="default" id="TSY-8o-z3Y"/>
+                            <constraint firstItem="Rpm-26-0qT" firstAttribute="top" secondItem="kDY-oS-uxk" secondAttribute="top" type="user" id="wfJ-rU-muk"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -141,40 +158,11 @@
             </objects>
             <point key="canvasLocation" x="900" y="112"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="yM7-XZ-ZSR">
-            <objects>
-                <viewController id="9ch-dG-GiR" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lY1-nV-n2W">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="118"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IIF-V5-8h9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1443" y="708"/>
-        </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="WFGameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFGameViewController.h"/>
-        </class>
-        <class className="WFRootViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFRootViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="gameViewAction:"/>
-                <relationship kind="action" name="startButton:"/>
-            </relationships>
-        </class>
-        <class className="WFWordListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFWordListViewController.h"/>
-        </class>
-    </classes>
+    <resources>
+        <image name="arrow.png" width="240" height="40"/>
+        <image name="target.png" width="250" height="300"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

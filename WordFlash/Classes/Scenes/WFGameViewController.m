@@ -49,7 +49,7 @@
 		
 		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:@selector(wordTappedAction:)];
 		button.tag = i;
-		[self.view addSubview:button];
+		[self.view insertSubview:button atIndex:0];
 		[self randomizeCenter:button];
 		[_buttonMutable addObject:button];
 		

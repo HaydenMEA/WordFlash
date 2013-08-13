@@ -8,19 +8,6 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "WordFlash/Classes/Scenes/WFGameViewController.m"
-         timestampString = "398045329.340825"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "WordFlash/Classes/Scenes/WFGameViewController.m"
          timestampString = "398037254.782988"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
