@@ -11,7 +11,7 @@
 @implementation WFdifficulty
 
 
-//--Call whichever dicciculty you need
+//--Call whichever difficulty you need (easy) (medium) (Hard)
 
 //--Create objects with properties -numberOfWords - displayTime - fallRate - gameTime and populate an array
 
