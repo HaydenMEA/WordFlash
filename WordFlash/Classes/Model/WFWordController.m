@@ -20,7 +20,7 @@
 	static __strong WFWordController *sharedInstance = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		sharedInstance = [[WFWordController alloc] init]; 		
+		sharedInstance = [[WFWordController alloc] init];
 	});
 	
 	return sharedInstance;
@@ -32,10 +32,10 @@
 	self = [super init];
 	if(self)
 	{
-		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"Weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee", @"Audion", @"Anatidaephobia", @"Agateophobia"];
+		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"Weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee", @"Audion", @"Anatidaephobia", @"Agateophobia", @"landed", @"wanted", @"filled", @"showed", @"hugged", @"tugged", @"planned", @"jogged", @"spilled", @"smelled", @"grilled", @"slammed", @"rushed", @"spelled", @"saved", @"baked", @"named", @"lined", @"smiled", @"closed", @"helped", @"jumped"];
 		
 		NSMutableArray *wordsM = [[NSMutableArray alloc] init];
-
+		
 		[strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 			WFword *word = [[WFword alloc] init];
 			word.string = obj;
@@ -67,11 +67,11 @@
 	NSMutableArray *wordSelection = [[NSMutableArray alloc] initWithArray:_words];
 	for(int x=0; x<5 /* get from difficulty */; x++)
 	{
-	int indexNumberToUse = arc4random() %wordSelection.count; //--select words to use from the dictionary
+		int indexNumberToUse = arc4random() %wordSelection.count; //--select words to use from the dictionary
 		
-	[selectedWords addObject:wordSelection[indexNumberToUse]]; 
-	[wordSelection removeObject:wordSelection[indexNumberToUse]];//- populate the set with the words from the array
-		 }
+		[selectedWords addObject:wordSelection[indexNumberToUse]];
+		[wordSelection removeObject:wordSelection[indexNumberToUse]];//- populate the set with the words from the array
+	}
 	
 	return selectedWords;
 }
