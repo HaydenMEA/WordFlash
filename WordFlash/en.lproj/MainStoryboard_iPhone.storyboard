@@ -138,11 +138,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.05374042424947556" blue="0.010319255918045167" alpha="0.17000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="2dQ-xx-g86" firstAttribute="centerY" secondItem="Jc4-iP-Sk9" secondAttribute="centerY" type="default" id="7xW-Pc-ocr"/>
                                     <constraint firstAttribute="trailing" secondItem="Jc4-iP-Sk9" secondAttribute="trailing" constant="30" id="FwR-63-wgZ"/>
                                     <constraint firstAttribute="height" constant="141" type="user" id="QR9-zC-QVl"/>
                                     <constraint firstItem="Jc4-iP-Sk9" firstAttribute="top" secondItem="Rpm-26-0qT" secondAttribute="top" constant="27" id="UfO-2X-yoh"/>
-                                    <constraint firstItem="2dQ-xx-g86" firstAttribute="leading" secondItem="Rpm-26-0qT" secondAttribute="leading" constant="8" id="ede-y9-EtQ"/>
+                                    <constraint firstItem="2dQ-xx-g86" firstAttribute="centerY" secondItem="Jc4-iP-Sk9" secondAttribute="centerY" type="default" id="j5b-PC-wdU"/>
+                                    <constraint firstItem="2dQ-xx-g86" firstAttribute="leading" secondItem="Rpm-26-0qT" secondAttribute="leading" constant="-103" id="puB-Hw-eVN"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -153,6 +153,10 @@
                             <constraint firstItem="Rpm-26-0qT" firstAttribute="top" secondItem="kDY-oS-uxk" secondAttribute="top" type="user" id="wfJ-rU-muk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="arrow" destination="2dQ-xx-g86" id="ASc-1c-lWX"/>
+                        <outlet property="view" destination="kDY-oS-uxk" id="hhJ-OR-rIA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1j-iW-qg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,6 +167,27 @@
         <image name="arrow.png" width="240" height="40"/>
         <image name="target.png" width="250" height="300"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="WFGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFGameViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="WFRootViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFRootViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="gameViewAction:"/>
+                <relationship kind="action" name="startButton:"/>
+            </relationships>
+        </class>
+        <class className="WFWordListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFWordListViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

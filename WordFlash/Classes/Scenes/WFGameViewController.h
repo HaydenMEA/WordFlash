@@ -10,6 +10,7 @@
 
 @interface WFGameViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *arrow;
 
 
 @end

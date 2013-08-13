@@ -21,6 +21,7 @@
 @property (nonatomic, strong) NSMutableArray *buttonMutable;
 
 
+
 @end
 
 @implementation WFGameViewController
@@ -67,9 +68,22 @@
 {
 	if ([_wordController containsWord:_wordController.words[button.tag]] == YES)
 	{
+		CGFloat arrowX = 186;
+		CGFloat arrowY = _arrow.center.y;
 		
+		[UIView animateWithDuration:.8 animations:^
+		 {
+			 _arrow.center = CGPointMake(arrowX, arrowY);
+			 
+		 } completion:^(BOOL finished)
+		 {
+			 _arrow.center = CGPointMake(-50, arrowY);
+			 
+		 }];
+		
+		[button removeFromSuperview];
 	}
-	else 
+	else
 	{
 		
 	}
@@ -104,7 +118,7 @@
 		UIButton *button = _buttonMutable[r];
 		
 		CGFloat x = button.center.x + 0;
-		CGFloat y = button.center.y + [_wordController.words[r]speed];
+		CGFloat y = button.center.y + 2;//[_wordController.words[r]speed];
 		
 		button.center = CGPointMake(x, y);
 		if (button.center.y > self.view.frame.size.height)
