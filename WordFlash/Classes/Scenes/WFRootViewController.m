@@ -10,12 +10,16 @@
 #import "WFWordListViewController.h"
 #import "WFGameViewController.h"
 #import "WFScoreViewController.h"
+#import "WFdifficulty.h"
+
 
 @interface WFRootViewController ()
 
 @property (nonatomic, strong)WFWordListViewController *wordListVC;
 @property (nonatomic, strong)WFGameViewController *gameVC;
 @property (nonatomic, strong)WFScoreViewController *scoreVC;
+@property (nonatomic, strong)WFdifficulty *level;
+
 
 @end
 
@@ -68,6 +72,8 @@
 //--Added new levels of game -- easy medium hard ---
 - (IBAction)startEasy:(id)sender
 {
+	
+	NSObject *level = [WFdifficulty easy];
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
