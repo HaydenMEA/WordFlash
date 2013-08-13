@@ -32,7 +32,7 @@
 	self = [super init];
 	if(self)
 	{
-		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"Weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee", @"Audion", @"Anatidaephobia", @"Agateophobia", @"landed", @"wanted", @"filled", @"showed", @"hugged", @"tugged", @"planned", @"jogged", @"spilled", @"smelled", @"grilled", @"slammed", @"rushed", @"spelled", @"saved", @"baked", @"named", @"lined", @"smiled", @"closed", @"helped", @"jumped"];
+		NSArray *strings = @[@"Apple", @"Banana", @"Happy", @"Weather", @"Table", @"Computer", @"Screen", @"Building", @"Sun", @"Coffee", @"Audion", @"Anatidaephobia", @"Agateophobia"];
 		
 		NSMutableArray *wordsM = [[NSMutableArray alloc] init];
 		
