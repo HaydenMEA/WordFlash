@@ -16,6 +16,7 @@
 @property(nonatomic, assign) NSInteger displayTime;
 @property(nonatomic, assign) CGFloat fallRate;
 @property(nonatomic, assign) NSInteger gameTime;
+@property(nonatomic, assign) NSInteger numberOfDistractWords;
 
 
 +(WFdifficulty *)easy;

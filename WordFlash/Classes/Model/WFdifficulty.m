@@ -33,6 +33,7 @@
 	difficulty.displayTime = 3;
 	difficulty.fallRate = 0.5;
 	difficulty.gameTime = 30;
+	difficulty.numberOfDistractWords = difficulty.numberOfWords * 2;
 	
 	return difficulty;
 }
@@ -43,7 +44,8 @@
 	difficulty.displayTime = 2;
 	difficulty.fallRate = 1.00;
 	difficulty.gameTime = 25;
-	
+	difficulty.numberOfDistractWords = difficulty.numberOfWords * 2;
+
 	return difficulty;
 }
 +(WFdifficulty *)hard
@@ -53,6 +55,7 @@
 	difficulty.displayTime = 1;
 	difficulty.fallRate = 1.25;
 	difficulty.gameTime = 20;
+	difficulty.numberOfDistractWords = difficulty.numberOfWords * 2;
 	
 	return difficulty;
 }
