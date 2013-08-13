@@ -52,8 +52,10 @@
 	for (int i = 0; i < _wordController.words.count; i++)
 	{
 		
-		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:@selector(wordTappedAction:)];
+		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:@selector(wordTappedAction:)event:UIControlEventTouchDown];
 		button.tag = i;
+		
+
 		[self.view insertSubview:button atIndex:0];
 		[self randomizeCenter:button];
 		[_buttonMutable addObject:button];
