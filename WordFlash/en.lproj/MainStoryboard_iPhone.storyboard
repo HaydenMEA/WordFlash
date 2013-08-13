@@ -165,7 +165,7 @@
         <!--Score View Controller-->
         <scene sceneID="01d-H0-Nh6">
             <objects>
-                <viewController id="mHD-76-Uz9" customClass="WFScoreViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WFScoreViewController" id="mHD-76-Uz9" customClass="WFScoreViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pe2-oz-Vdt">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
