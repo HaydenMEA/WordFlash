@@ -17,9 +17,9 @@
 @property(nonatomic, strong) NSArray *words;
 @property(nonatomic, strong) NSArray *selectedWords;
 
-
 +(WFWordController *)defaultManager;
 -(NSArray *)getWordsToRemember;
 - (BOOL)containsWord:(WFword *)word;
+
 
 @end
