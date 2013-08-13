@@ -124,6 +124,7 @@
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_scoreVC = [storyboard instantiateViewControllerWithIdentifier:@"WFScoreViewController"];
 	[self.view addSubview:_scoreVC.view];
+	[_gameVC.view removeFromSuperview];
 	
 }
 

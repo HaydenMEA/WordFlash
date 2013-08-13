@@ -10,12 +10,14 @@
 #import "WFScoreManager.h"
 #import "WFWordController.h"
 #import "WFRootViewController.h"
+#import "WFGameViewController.h"
 
 @interface WFScoreViewController ()
 
 @property (nonatomic, strong)WFScoreManager *scoreManager;
 @property (nonatomic, strong)WFWordController *wordController;
-@property (nonatomic, strong)WFRootViewController *rootController;
+@property (nonatomic, strong)WFRootViewController *rootVC;
+@property (nonatomic, strong)WFGameViewController *gameVC;
 
 @end
 
@@ -52,7 +54,10 @@
 
 - (IBAction)resetAction:(id)sender
 {
-	[self.view addSubview:_rootController.view];
+	[self.view removeFromSuperview];
+	[_gameVC.view removeFromSuperview];
+	
+//	[self.view addSubview:_rootController.view];
 	NSLog(@"YES");
 }
 @end
