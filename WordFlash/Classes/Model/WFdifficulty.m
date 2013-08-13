@@ -49,7 +49,7 @@
 +(WFdifficulty *)hard
 {
 	WFdifficulty *difficulty = [[WFdifficulty alloc] init];
-	difficulty.numberOfWords = 15;
+	difficulty.numberOfWords = 20;
 	difficulty.displayTime = 1;
 	difficulty.fallRate = 1.25;
 	difficulty.gameTime = 20;
