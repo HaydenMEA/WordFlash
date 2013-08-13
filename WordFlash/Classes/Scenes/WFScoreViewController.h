@@ -11,6 +11,7 @@
 @interface WFScoreViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *scoreAcheived;
 @property (weak, nonatomic) IBOutlet UILabel *scoreAttainable;
+- (IBAction)resetAction:(id)sender;
 
 
 

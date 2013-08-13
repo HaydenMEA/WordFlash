@@ -9,11 +9,13 @@
 #import "WFScoreViewController.h"
 #import "WFScoreManager.h"
 #import "WFWordController.h"
+#import "WFRootViewController.h"
 
 @interface WFScoreViewController ()
 
 @property (nonatomic, strong)WFScoreManager *scoreManager;
 @property (nonatomic, strong)WFWordController *wordController;
+@property (nonatomic, strong)WFRootViewController *rootController;
 
 @end
 
@@ -48,4 +50,9 @@
 
 
 
+- (IBAction)resetAction:(id)sender
+{
+	[self.view addSubview:_rootController.view];
+	NSLog(@"YES");
+}
 @end
