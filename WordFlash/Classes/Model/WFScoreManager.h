@@ -10,6 +10,7 @@
 
 @interface WFScoreManager : NSObject
 @property(nonatomic, assign)NSInteger *score;
+@property (nonatomic, strong) UILabel *labelScore;
 
 
 +(WFScoreManager *)defaultManager;
