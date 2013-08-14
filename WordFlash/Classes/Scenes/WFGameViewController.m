@@ -22,6 +22,7 @@
 @property (nonatomic, strong) WFScoreManager *scoreManager;
 @property (nonatomic, strong) CAEmitterLayer *emitter;
 
+
 @end
 
 @implementation WFGameViewController
@@ -44,10 +45,10 @@
 	_scoreManager = [WFScoreManager defaultManager];
 	_buttonMutable = [[NSMutableArray alloc] init];
 	
-
-///////////----------------------
-///// --------- WRONG WORDS
-///////////----------------------
+	
+	///////////----------------------
+	///// --------- WRONG WORDS
+	///////////----------------------
 	
 	NSLog(@"%@",_buttonMutable);
 	for (int i = 0; i < _wordController.selectedDistractWords.count; i++)
@@ -158,7 +159,7 @@
 {
 	_emitter = [[CAEmitterLayer alloc] init];
 	_emitter.position = wrongWordsButton.center;
-	_emitter.duration = 1;
+	_emitter.duration = 100;
 	
 	CAEmitterCell *cell = [CAEmitterCell emitterCell];
 	UIImage *image = [UIImage imageNamed:@"smoke.png"];
@@ -182,16 +183,16 @@
 	[self.view.layer addSublayer:_emitter];
 	
 	
-
-		for(int i = 0; i < _buttonMutable.count; i++)
-		{
-			UIButton *correctWordsButton = _buttonMutable[i];
-			UIButton *wrongWordsButton = _buttonMutable[i];
-			
-			[self randomizeCenter:correctWordsButton];
-			[self randomizeCenter:wrongWordsButton];
-		}
-		NSLog(@"NO");
+	
+	for(int i = 0; i < _buttonMutable.count; i++)
+	{
+		UIButton *correctWordsButton = _buttonMutable[i];
+		UIButton *wrongWordsButton = _buttonMutable[i];
+		
+		[self randomizeCenter:correctWordsButton];
+		[self randomizeCenter:wrongWordsButton];
+	}
+	NSLog(@"NO");
 }
 
 
