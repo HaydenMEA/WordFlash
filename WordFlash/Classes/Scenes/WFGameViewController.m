@@ -156,7 +156,33 @@
 
 - (void)wrongWordTappedAction:(UIButton *)wrongWordsButton
 {
+	_emitter = [[CAEmitterLayer alloc] init];
+	_emitter.position = wrongWordsButton.center;
+	_emitter.duration = 1;
 	
+	CAEmitterCell *cell = [CAEmitterCell emitterCell];
+	UIImage *image = [UIImage imageNamed:@"smoke.png"];
+	cell.contents = (__bridge id)(image.CGImage);
+	cell.birthRate = 10;
+	cell.velocity = 20;
+	cell.lifetime = 1;
+	cell.spin = 50;
+	cell.spinRange = 5;
+	cell.alphaSpeed = 5;
+	cell.lifetimeRange = 1;
+	cell.greenSpeed = 0;
+	cell.greenRange = 9;
+	cell.blueRange = 5;
+	cell.blueSpeed = 0;
+	cell.redRange = 9;
+	cell.redSpeed = 0;
+	cell.emissionRange = M_PI;
+	
+	_emitter.emitterCells = @[cell];
+	[self.view.layer addSublayer:_emitter];
+	
+	
+
 		for(int i = 0; i < _buttonMutable.count; i++)
 		{
 			UIButton *correctWordsButton = _buttonMutable[i];
@@ -167,49 +193,6 @@
 		}
 		NSLog(@"NO");
 }
-
--(void)deathAnimationCompletion:(UIButton *)wrongWordsButton
-{
-	
-	_emitter = [[CAEmitterLayer alloc] init];
-	//CGFloat xPos = self.view. frame.size.height * 0.5; //--get button position
-	//CGFloat yPos = self.view.frame.size.width * 0.5;
-	_emitter.position = wrongWordsButton.center;
-		
-//	CAEmitterCell *cell = [CAEmitterCell emitterCell];
-//	UIImage *image = [UIImage imageNamed:@"smoke.png"];
-//	cell.contents = (__bridge id)(image.CGImage);
-//	cell.birthRate = 10;
-//	cell.velocity = 20;
-//	cell.lifetime = 1;
-//	cell.spin = 50;
-//	cell.spinRange = 5;
-//	cell.alphaSpeed = 5;
-//	cell.lifetimeRange = 1;
-//	cell.greenSpeed = 0;
-//	cell.greenRange = 9;
-//	cell.blueRange = 5;
-//	cell.blueSpeed = 0;
-//	cell.redRange = 9;
-//	cell.redSpeed = 0;
-//	cell.emissionRange = M_PI;
-//	
-//	_emitter.emitterCells = @[cell];
-//	[self.view.layer addSublayer:_emitter];
-//	
-//	self.completion = completion;
-//	[self performSelector:@selector(finishDeathAnimation) withObject:nil afterDelay:cell.lifetime];
-//	
-//	
-}
-//-(void)finishDeathAnimation
-//{
-//	_emitter.birthRate = 0;
-//	if(self.completion)
-//		self.completion(YES);
-//	
-//	
-//}
 
 
 ////------ RANDOMIZE WHERE BUTTON SPAWNS ABOVE THE SCREEN WITHIN THE WIDTH ------
