@@ -54,14 +54,14 @@
 	[self.view addSubview:_wrongWords.view];
 	[self.view addSubview:_correctWords.view];
 	
-	NSLog(@"%@", _wordController.words);
+//	NSLog(@"%@", _wordController.words);
 	_buttonMutable = [[NSMutableArray alloc] init];
 	
 	
-	for (int i = 0; i < _wordController.words.count; i++)
+	for (int i = 0; i < _wordController.selectedDistractWords.count; i++)
 	{
 		
-		UIButton *button = [UIButton buttonWithTitle:[_wordController.words[i] string] target:self selector:@selector(wordTappedAction:)event:UIControlEventTouchDown];
+		UIButton *button = [UIButton buttonWithTitle:[_wordController.selectedDistractWords[i] string] target:self selector:@selector(wordTappedAction:)event:UIControlEventTouchDown];
 
 ////------ KEEPING TRACK OF BUTTONS ------
 
@@ -81,21 +81,47 @@
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button sizeToFit];
 		
-		if ([_wordController containsWord:_wordController.words[button.tag]] == YES)
-		{
-			[_correctWords.view addSubview:button];
-		}
-		else
-		{
-			[_wrongWords.view addSubview:button];
-		}
-//		[self.view insertSubview:button atIndex:0];
+		[_wrongWords.view addSubview:button];
+
 		
 
 ////------ RANDOMIZE WHERE BUTTON SPAWNS ABOVE THE SCREEN ------
 		
 		[self randomizeCenter:button];
 		[_buttonMutable addObject:button];
+		
+	}
+	for (int i = 0; i < _wordController.selectedWords.count; i++)
+	{
+		
+		UIButton *button2 = [UIButton buttonWithTitle:[_wordController.selectedWords[i] string] target:self selector:@selector(wordTappedAction:)event:UIControlEventTouchDown];
+		
+		////------ KEEPING TRACK OF BUTTONS ------
+		
+		button2.tag = i;
+		
+		////------ ADDING A SCROLL IMAGE TO BUTTON ------
+		
+		UIImage *scrollImage = [UIImage imageNamed:@"scroll.png"];
+		CGFloat widthInset = scrollImage.size.width * 0.5 -1;
+		CGFloat heightInset = scrollImage.size.height * 0.5 -1;
+		UIEdgeInsets insets = UIEdgeInsetsMake(heightInset, widthInset, heightInset, widthInset);
+		scrollImage = [scrollImage resizableImageWithCapInsets:insets];
+		[button2 setBackgroundImage:scrollImage forState:UIControlStateNormal];
+		
+		////------ SET COLOR OF BUTTON TEXT ------
+		
+//		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		[button2 sizeToFit];
+		
+		[_correctWords.view addSubview:button2];
+		
+		
+		
+		////------ RANDOMIZE WHERE BUTTON SPAWNS ABOVE THE SCREEN ------
+		
+		[self randomizeCenter:button2];
+		[_buttonMutable addObject:button2];
 		
 	}
 	NSLog(@"%@",_buttonMutable);
@@ -107,9 +133,9 @@
 	
 	
 }
-- (void)wordTappedAction:(UIButton *)button
+- (void)wordTappedAction:(UIButton *)button2
 {
-	if ([_wordController containsWord:_wordController.words[button.tag]] == YES)
+	if ([_wordController containsWord:_wordController.selectedWords[button2.tag]] == YES)
 	{
 		CGFloat arrowX = 186;
 		CGFloat arrowY = _arrow.center.y;
@@ -124,7 +150,7 @@
 			 
 		 }];
 		
-		[button removeFromSuperview];
+		[button2 removeFromSuperview];
 		[_scoreManager increaseScore:1];
 		NSLog(@"YES");
 	}
