@@ -140,7 +140,6 @@
 					  @"unrealistically",
 					  @"syntypic",
 					  @"cylindroid",
-					  @"rubï¿¥ï¾½n",
 					  @"antiquing",
 					  @"overneutralization",
 					  @"propontis",
@@ -287,7 +286,6 @@
 					  @"fester",
 					  @"butylene",
 					  @"moesogoth",
-					  @"o''connor",
 					  @"botvinnik",
 					  @"alkoran",
 					  @"proximal",
@@ -494,6 +492,22 @@
 	
 	_selectedWords = selectedWords;
 }
+-(void)createDistractWords:(NSInteger)numberOfWords
+{
+	NSMutableArray *selectedWords = [[NSMutableArray alloc] init];	//Create a set to hold a selection of words
+	NSMutableArray *wordSelection = [[NSMutableArray alloc] initWithArray:_words];
+	for(int x=0; x< numberOfWords /* get from difficulty */; x++)
+	{
+		int indexNumberToUse = arc4random() %wordSelection.count; //--select words to use from the dictionary
+		
+		[selectedWords addObject:wordSelection[indexNumberToUse]];
+		[wordSelection removeObject:wordSelection[indexNumberToUse]];//- populate the set with the words from the array
+	}
+	
+	_selectedWords = selectedWords;
+}
+
+
 
 - (BOOL)containsWord:(WFword *)word		//--checks if the word existed in selected words
 {
