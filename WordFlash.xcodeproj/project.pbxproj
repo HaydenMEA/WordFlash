@@ -45,6 +45,8 @@
 		67B60F7917BC304B00C7FBC1 /* WFScrollButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B60F7817BC304B00C7FBC1 /* WFScrollButton.m */; };
 		67B60F7B17BC436000C7FBC1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B60F7A17BC436000C7FBC1 /* icon.png */; };
 		67B60F7D17BC438D00C7FBC1 /* icon~iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B60F7C17BC438D00C7FBC1 /* icon~iphone@2x.png */; };
+		67B60F7F17BC447600C7FBC1 /* icon~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B60F7E17BC447600C7FBC1 /* icon~ipad@2x.png */; };
+		67B60F8117BC447A00C7FBC1 /* icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B60F8017BC447A00C7FBC1 /* icon~ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,8 @@
 		67B60F7817BC304B00C7FBC1 /* WFScrollButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFScrollButton.m; sourceTree = "<group>"; };
 		67B60F7A17BC436000C7FBC1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		67B60F7C17BC438D00C7FBC1 /* icon~iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon~iphone@2x.png"; sourceTree = "<group>"; };
+		67B60F7E17BC447600C7FBC1 /* icon~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon~ipad@2x.png"; sourceTree = "<group>"; };
+		67B60F8017BC447A00C7FBC1 /* icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,8 @@
 		67A71D1617B844AE0010DDE1 = {
 			isa = PBXGroup;
 			children = (
+				67B60F8017BC447A00C7FBC1 /* icon~ipad.png */,
+				67B60F7E17BC447600C7FBC1 /* icon~ipad@2x.png */,
 				67B60F7C17BC438D00C7FBC1 /* icon~iphone@2x.png */,
 				67B60F7A17BC436000C7FBC1 /* icon.png */,
 				67A71D2817B844AE0010DDE1 /* WordFlash */,
@@ -346,6 +352,8 @@
 				28DC5E4C17BB24E9002FDCBB /* smoke.png in Resources */,
 				67B60F7B17BC436000C7FBC1 /* icon.png in Resources */,
 				67B60F7D17BC438D00C7FBC1 /* icon~iphone@2x.png in Resources */,
+				67B60F7F17BC447600C7FBC1 /* icon~ipad@2x.png in Resources */,
+				67B60F8117BC447A00C7FBC1 /* icon~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
