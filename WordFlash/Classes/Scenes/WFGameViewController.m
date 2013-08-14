@@ -21,9 +21,6 @@
 @property (nonatomic, strong) NSMutableArray *buttonMutable;
 @property (nonatomic, strong) WFScoreManager *scoreManager;
 
-
-
-
 @end
 
 @implementation WFGameViewController
@@ -128,6 +125,9 @@
 	
 	
 }
+
+////----- WHAT HAPPENS WHEN THE CORRECT BUTTON IS TAPPED
+
 - (void)wordTappedAction:(UIButton *)correctWordsButton
 {
 	if ([_wordController containsWord:_wordController.selectedWords[correctWordsButton.tag]] == YES)
@@ -150,6 +150,9 @@
 		NSLog(@"YES");
 	}
 }
+
+////----- WHAT HAPPENS WHEN THE WRONG BUTTON IS TAPPED
+
 - (void)wrongWordTappedAction:(UIButton *)wrongWordsButton
 {
 	
