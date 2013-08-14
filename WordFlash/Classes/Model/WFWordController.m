@@ -506,7 +506,6 @@
 		
 		[selectedDistractWords addObject:fromWordSelection[indexNumberToUse]];
 		[fromWordSelection removeObject:fromWordSelection[indexNumberToUse]];//- populate the set with the words from the array
-		NSLog(@"TEST");
 	}
 	
 	_selectedDistractWords = selectedDistractWords;
