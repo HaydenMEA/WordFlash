@@ -135,6 +135,7 @@
 	NSLog(@"%f, %f",width , height);
 }
 
+
 - (IBAction)scoreViewAction:(id)sender
 {
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
