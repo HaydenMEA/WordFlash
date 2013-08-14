@@ -61,6 +61,7 @@
 
 - (IBAction)resetAction:(id)sender
 {
+	_scoreManager.score = 0;
 	[self.view removeFromSuperview];
 	[_gameVC.view removeFromSuperview];
 	NSLog(@"GAME RESET");
