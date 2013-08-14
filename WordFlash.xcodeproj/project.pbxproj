@@ -43,6 +43,8 @@
 		67A71D3F17B844AE0010DDE1 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A71D3D17B844AE0010DDE1 /* MainStoryboard_iPad.storyboard */; };
 		67A71D5A17B8473F0010DDE1 /* WFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A71D5817B8473F0010DDE1 /* WFAppDelegate.m */; };
 		67B60F7917BC304B00C7FBC1 /* WFScrollButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B60F7817BC304B00C7FBC1 /* WFScrollButton.m */; };
+		67B60F7B17BC436000C7FBC1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B60F7A17BC436000C7FBC1 /* icon.png */; };
+		67B60F7D17BC438D00C7FBC1 /* icon~iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B60F7C17BC438D00C7FBC1 /* icon~iphone@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +99,8 @@
 		67A71D5817B8473F0010DDE1 /* WFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAppDelegate.m; sourceTree = "<group>"; };
 		67B60F7717BC304B00C7FBC1 /* WFScrollButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFScrollButton.h; sourceTree = "<group>"; };
 		67B60F7817BC304B00C7FBC1 /* WFScrollButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFScrollButton.m; sourceTree = "<group>"; };
+		67B60F7A17BC436000C7FBC1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		67B60F7C17BC438D00C7FBC1 /* icon~iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon~iphone@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 		67A71D1617B844AE0010DDE1 = {
 			isa = PBXGroup;
 			children = (
+				67B60F7C17BC438D00C7FBC1 /* icon~iphone@2x.png */,
+				67B60F7A17BC436000C7FBC1 /* icon.png */,
 				67A71D2817B844AE0010DDE1 /* WordFlash */,
 				67A71D2117B844AE0010DDE1 /* Frameworks */,
 				67A71D2017B844AE0010DDE1 /* Products */,
@@ -338,6 +344,8 @@
 				6743211017BB24D3004350A1 /* background~iphone.png in Resources */,
 				6743211117BB24D3004350A1 /* background~iphone@2x.png in Resources */,
 				28DC5E4C17BB24E9002FDCBB /* smoke.png in Resources */,
+				67B60F7B17BC436000C7FBC1 /* icon.png in Resources */,
+				67B60F7D17BC438D00C7FBC1 /* icon~iphone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
