@@ -33,6 +33,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	UIImage *image = iPhone568Image(@"background.png");//[UIImage imageNamed:@"background.png"];
+	self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 	
 	_wordController = [WFWordController defaultManager];
 	
