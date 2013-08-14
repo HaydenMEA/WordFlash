@@ -11,7 +11,8 @@
 #import "WFWordController.h"
 #import "WFword.h"
 #import "WFScoreManager.h"
-
+#import "WFCorrectWordsViewController.h"
+#import "WFWrongWordsViewController.h"
 
 @interface WFGameViewController ()
 
@@ -21,6 +22,8 @@
 @property (nonatomic, strong) NSArray *words;
 @property (nonatomic, strong) NSMutableArray *buttonMutable;
 @property (nonatomic, strong) WFScoreManager *scoreManager;
+@property (nonatomic, strong) WFCorrectWordsViewController *correctWords;
+@property (nonatomic, strong) WFWrongWordsViewController *wrongWords;
 
 
 
@@ -44,6 +47,12 @@
 	// Do any additional setup after loading the view.
 	_wordController = [WFWordController defaultManager];
 	_scoreManager = [WFScoreManager defaultManager];
+	
+//	_correctWords.view = [[UIView alloc] init];
+//	_wrongWords.view = [[UIView alloc] init];
+//	
+//	[self.view addSubview:_wrongWords.view];
+//	[self.view addSubview:_correctWords.view];
 	
 	NSLog(@"%@", _wordController.words);
 	_buttonMutable = [[NSMutableArray alloc] init];
@@ -72,7 +81,16 @@
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button sizeToFit];
 		
-		[self.view insertSubview:button atIndex:0];
+//		if ([_wordController containsWord:_wordController.words[button.tag]] == YES)
+//		{
+//			[_correctWords.view addSubview:button];
+//		}
+//		else
+//		{
+//			[_wrongWords.view addSubview:button];
+//		}
+//		[self.view insertSubview:button atIndex:0];
+		
 
 ////------ RANDOMIZE WHERE BUTTON SPAWNS ABOVE THE SCREEN ------
 		
