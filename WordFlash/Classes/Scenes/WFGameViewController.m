@@ -22,8 +22,7 @@
 @property (nonatomic, strong) NSArray *words;
 @property (nonatomic, strong) NSMutableArray *buttonMutable;
 @property (nonatomic, strong) WFScoreManager *scoreManager;
-@property (nonatomic, strong) WFCorrectWordsViewController *correctWords;
-@property (nonatomic, strong) WFWrongWordsViewController *wrongWords;
+
 
 
 
@@ -47,12 +46,7 @@
 	// Do any additional setup after loading the view.
 	_wordController = [WFWordController defaultManager];
 	_scoreManager = [WFScoreManager defaultManager];
-	
-	_correctWords = [[WFCorrectWordsViewController alloc] init];
-	_wrongWords = [[WFWrongWordsViewController alloc] init];
-	
-	[self.view addSubview:_wrongWords.view];
-	[self.view addSubview:_correctWords.view];
+		
 	
 //	NSLog(@"%@", _wordController.words);
 	_buttonMutable = [[NSMutableArray alloc] init];
@@ -81,7 +75,7 @@
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button sizeToFit];
 		
-		[_wrongWords.view addSubview:button];
+		[self.view addSubview:button];
 
 		
 
@@ -114,7 +108,7 @@
 //		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button2 sizeToFit];
 		
-		[_correctWords.view addSubview:button2];
+		[self.view addSubview:button2];
 		
 		
 		
