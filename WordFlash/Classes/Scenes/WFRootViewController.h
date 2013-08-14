@@ -10,7 +10,7 @@
 
 @interface WFRootViewController : UIViewController
 
-- (IBAction)startButton:(id)sender;
+//- (IBAction)startButton:(id)sender;
 
 - (IBAction)startEasy:(id)sender;
 - (IBAction)startMedium:(id)sender;

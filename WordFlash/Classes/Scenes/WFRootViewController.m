@@ -43,23 +43,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)startButton:(id)sender
-{
-	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
-	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
-	[self.view addSubview:_wordListVC.view];
-	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:2];
-	
-	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:9];
-	
-	
-	CGFloat width = self.view.frame.size.width;
-	CGFloat height = self.view.frame.size.height;
-	
-	NSLog(@"%f, %f",width , height);
-	
-	
-}
+//- (IBAction)startButton:(id)sender
+//{
+//	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+//	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
+//	[self.view addSubview:_wordListVC.view];
+//	[self performSelector:@selector(gameViewAction:) withObject:_gameVC afterDelay:2];
+//	
+//	[self performSelector:@selector(scoreViewAction:) withObject:_scoreVC afterDelay:9];
+//	
+//	
+//	CGFloat width = self.view.frame.size.width;
+//	CGFloat height = self.view.frame.size.height;
+//	
+//	NSLog(@"%f, %f",width , height);
+//	
+//	
+//}
 
 - (IBAction)gameViewAction:(id)sender
 {
@@ -74,12 +74,13 @@
 //--Added new levels of game -- easy medium hard ---
 - (IBAction)startEasy:(id)sender
 {
-	
+	//---The following block now gives the gamelevel the difficulty variables
 	_level = [WFdifficulty easy];
 	_gameLevel = [WFWordController  defaultManager];
 	[_gameLevel loadWordsWithSpeedModifier:_level.fallRate];
 	[_gameLevel createWords:_level.numberOfWords];
 	[_gameLevel createDistractWords:_level.numberOfDistractWords];
+	
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];

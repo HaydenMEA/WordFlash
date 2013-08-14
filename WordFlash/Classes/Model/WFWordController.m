@@ -41,6 +41,7 @@
 	return self;
 }
 
+//-- Created a big list of words to take selections from ---//
 - (void)loadWordsWithSpeedModifier:(CGFloat)speedModifer
 {
 	NSArray *strings = @[@"Apple",
@@ -478,6 +479,7 @@
 
 }
 
+//---pick out some words that can be used to remember and populate "correct" buttons 
 -(void)createWords:(NSInteger)numberOfWords
 {
 	NSMutableArray *selectedWords = [[NSMutableArray alloc] init];	//Create a set to hold a selection of words
@@ -492,6 +494,8 @@
 	
 	_selectedWords = selectedWords;
 }
+
+//---Make some distracting words that can be used to fall at the same time as correct words
 -(void)createDistractWords:(NSInteger)numberOfDistractWords
 {
 	NSMutableArray *selectedDistractWords = [[NSMutableArray alloc] init];	//Create a set to hold a selection of words
