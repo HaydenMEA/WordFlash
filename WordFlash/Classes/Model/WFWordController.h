@@ -16,6 +16,7 @@
 
 @property(nonatomic, strong) NSArray *words;
 @property(nonatomic, strong) NSArray *selectedWords;
+@property(nonatomic, strong) NSArray *selectedDistractWords;
 
 +(WFWordController *)defaultManager;
 - (BOOL)containsWord:(WFword *)word;

@@ -494,17 +494,17 @@
 }
 -(void)createDistractWords:(NSInteger)numberOfDistractWords
 {
-	NSMutableArray *selectedWords = [[NSMutableArray alloc] init];	//Create a set to hold a selection of words
-	NSMutableArray *wordSelection = [[NSMutableArray alloc] initWithArray:_words];
+	NSMutableArray *selectedDistractWords = [[NSMutableArray alloc] init];	//Create a set to hold a selection of words
+	NSMutableArray *fromWordSelection = [[NSMutableArray alloc] initWithArray:_words];
 	for(int x=0; x< numberOfDistractWords /* get from difficulty */; x++)
 	{
-		int indexNumberToUse = arc4random() %wordSelection.count; //--select words to use from the dictionary
+		int indexNumberToUse = arc4random() %fromWordSelection.count; //--select words to use from the dictionary
 		
-		[selectedWords addObject:wordSelection[indexNumberToUse]];
-		[wordSelection removeObject:wordSelection[indexNumberToUse]];//- populate the set with the words from the array
+		[selectedDistractWords addObject:fromWordSelection[indexNumberToUse]];
+		[fromWordSelection removeObject:fromWordSelection[indexNumberToUse]];//- populate the set with the words from the array
 	}
 	
-	_selectedWords = selectedWords;
+	_selectedDistractWords = selectedDistractWords;
 }
 
 
