@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
+typedef void (^WFScoreView)(void);
+
 
 @interface WFGameViewController : UIViewController
+@property (nonatomic, copy) WFScoreView scoreView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *arrow;
 

@@ -15,6 +15,7 @@
 
 @interface WFRootViewController ()
 
+@property (nonatomic, strong)WFRootViewController *rootVC;
 @property (nonatomic, strong)WFWordListViewController *wordListVC;
 @property (nonatomic, strong)WFGameViewController *gameVC;
 @property (nonatomic, strong)WFScoreViewController *scoreVC;
@@ -27,15 +28,15 @@
 
 @implementation WFRootViewController
 
+static BOOL _showingScore;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	UIImage *image = iPhone568Image(@"background.png");//[UIImage imageNamed:@"background.png"];
 	self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-	//	CGRect frame = CGRectMake(0, 0, image.size.width, image.size.height);
-	//	self.view = [[UIView alloc]initWithFrame:frame];
-}
+	}
 
 - (void)didReceiveMemoryWarning
 {
@@ -51,12 +52,21 @@
 	_gameVC = [storyboard instantiateViewControllerWithIdentifier:@"WFGameViewController"];
 	[self.view addSubview:_gameVC.view];
 	[_wordListVC.view removeFromSuperview];
+	__weak WFRootViewController *weakSelf = self;
+	
+	_gameVC.scoreView = ^
+	{
+		NSLog(@"***%@", weakSelf);
+		[weakSelf scoreViewAction:nil];
+	};
+
 }
 
 
 //--Added new levels of game -- easy medium hard ---
 - (IBAction)startEasy:(id)sender
 {
+	_showingScore = NO;
 	//---The following block now gives the gamelevel the difficulty variables
 	_level = [WFdifficulty easy];
 	_gameLevel = [WFWordController  defaultManager];
@@ -80,6 +90,7 @@
 - (IBAction)startMedium:(id)sender
 {
 	
+	_showingScore = NO;
 	_level = [WFdifficulty medium];
 	_gameLevel = [WFWordController  defaultManager];
 	[_gameLevel loadWordsWithSpeedModifier:_level.fallRate];
@@ -100,7 +111,7 @@
 
 - (IBAction)startHard:(id)sender
 {
-	
+	_showingScore = NO;
 	_level = [WFdifficulty hard];
 	_gameLevel = [WFWordController  defaultManager];
 	[_gameLevel loadWordsWithSpeedModifier:_level.fallRate];
@@ -121,11 +132,14 @@
 
 - (IBAction)scoreViewAction:(id)sender
 {
-	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
-	_scoreVC = [storyboard instantiateViewControllerWithIdentifier:@"WFScoreViewController"];
-	[self.view addSubview:_scoreVC.view];
-	[_gameVC.view removeFromSuperview];
-	
+	if (!_showingScore)
+	{
+		_showingScore = YES;
+		UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+		_scoreVC = [storyboard instantiateViewControllerWithIdentifier:@"WFScoreViewController"];
+		[self.view addSubview:_scoreVC.view];
+		[_gameVC.view removeFromSuperview];
+	}
 }
 
 

@@ -151,6 +151,11 @@
 		
 		[correctWordsButton removeFromSuperview];
 		[_scoreManager increaseScore:1];
+		if (_scoreManager.score == (_wordController.selectedWords.count))
+		{
+			if (self.scoreView)
+				self.scoreView();
+		}
 		NSLog(@"YES");
 	}
 }
