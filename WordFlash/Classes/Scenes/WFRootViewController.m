@@ -79,6 +79,7 @@
 	_gameLevel = [WFWordController  defaultManager];
 	[_gameLevel loadWordsWithSpeedModifier:_level.fallRate];
 	[_gameLevel createWords:_level.numberOfWords];
+	[_gameLevel createDistractWords:_level.numberOfDistractWords];
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
@@ -99,6 +100,7 @@
 	_gameLevel = [WFWordController  defaultManager];
 	[_gameLevel loadWordsWithSpeedModifier:_level.fallRate];
 	[_gameLevel createWords:_level.numberOfWords];
+	[_gameLevel createDistractWords:_level.numberOfDistractWords];
 	
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
@@ -119,6 +121,7 @@
 	_gameLevel = [WFWordController  defaultManager];
 	[_gameLevel loadWordsWithSpeedModifier:_level.fallRate];
 	[_gameLevel createWords:_level.numberOfWords];
+	[_gameLevel createDistractWords:_level.numberOfDistractWords];
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	_wordListVC = [storyboard instantiateViewControllerWithIdentifier:@"WordListViewController"];
 	[self.view addSubview:_wordListVC.view];
