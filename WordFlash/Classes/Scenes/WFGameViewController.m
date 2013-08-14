@@ -152,11 +152,8 @@
 	}
 }
 
-<<<<<<< HEAD
-=======
 ////----- WHAT HAPPENS WHEN THE WRONG BUTTON IS TAPPED
 
->>>>>>> 6368742640606164b5871ab3a0bd1fe35b361c47
 - (void)wrongWordTappedAction:(UIButton *)wrongWordsButton
 {
 	
