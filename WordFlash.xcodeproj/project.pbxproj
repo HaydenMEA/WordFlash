@@ -129,9 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				28DC5E3817B85C4F002FDCBB /* WFRootViewController.h */,
+				28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */,
 				0148CE4E17BAFE07001A558C /* WFCorrectWordsViewController.h */,
 				0148CE4F17BAFE08001A558C /* WFCorrectWordsViewController.m */,
-				28DC5E3917B85C4F002FDCBB /* WFRootViewController.m */,
 				28DC5E3A17B85C4F002FDCBB /* WFWordListViewController.h */,
 				28DC5E3B17B85C4F002FDCBB /* WFWordListViewController.m */,
 				018B775917B86031007C2925 /* WFGameViewController.h */,

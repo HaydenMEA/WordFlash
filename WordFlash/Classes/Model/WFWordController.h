@@ -24,4 +24,6 @@
 
 -(void)createWords:(NSInteger)numberOfWords;
 
+-(void)createDistractWords:(NSInteger)numberOfDistractWords;
+
 @end
