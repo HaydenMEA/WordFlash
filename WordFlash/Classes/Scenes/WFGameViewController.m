@@ -155,41 +155,39 @@
 	}
 }
 
-- (void)extracted_method:(UIButton *)wrongButton
+- (void)blowUpShit:(UIButton *)wrongButton
 {
     _emitter = [[CAEmitterLayer alloc] init];
 	_emitter.position = wrongButton.center;
-//	_emitter.duration = 100;
-	
 	CAEmitterCell *cell = [CAEmitterCell emitterCell];
 	UIImage *image = [UIImage imageNamed:@"smoke.png"];
 	cell.contents = (__bridge id)(image.CGImage);
-	cell.birthRate = 10;
+	cell.birthRate = 20;
 	cell.velocity = 20;
 	cell.lifetime = 1;
-	cell.spin = 50;
+	cell.spin = 1;
 	cell.spinRange = 5;
-	cell.alphaSpeed = 5;
+	cell.alphaSpeed = 15;
 	cell.lifetimeRange = 1;
 	cell.greenSpeed = 0;
 	cell.greenRange = 9;
-	cell.blueRange = 5;
+	cell.blueRange = 9;
 	cell.blueSpeed = 0;
-	cell.redRange = 9;
-	cell.redSpeed = 0;
+	cell.redRange = 1;
+	cell.redSpeed = 5;
 	cell.emissionRange = M_PI;
 	
 	_emitter.emitterCells = @[cell];
 	[self.view.layer addSublayer:_emitter];
+	[_emitter performSelector:@selector(removeFromSuperlayer) withObject:nil afterDelay:0.5];
+	
 }
-
-
 
 ////----- WHAT HAPPENS WHEN THE WRONG BUTTON IS TAPPED
 
 - (void)wrongWordTappedAction:(UIButton *)wrongWordsButton
 {
-	[self extracted_method:wrongWordsButton];
+	[self blowUpShit:wrongWordsButton];
 	
 	
 	for(int i = 0; i < _buttonMutable.count; i++)
@@ -201,6 +199,7 @@
 		[self randomizeCenter:wrongWordsButton];
 	}
 	
+
 	NSLog(@"NO");
 }
 
