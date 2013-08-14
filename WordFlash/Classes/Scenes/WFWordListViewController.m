@@ -48,6 +48,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	return _wordController.selectedWords.count;
+	tableView.backgroundColor = [UIColor clearColor];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -55,14 +56,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 	
 	cell.textLabel.text =[_wordController.selectedWords[indexPath.row] string];
+	cell.backgroundColor = [UIColor clearColor];
 	
 	NSLog(@"%@",[_wordController.selectedWords[indexPath.row] string]);
-	
-	
-//	CCPart *part = self.computer.parts[indexPath.row];
-//	cell.textLabel.text = [part name];
-//	cell.detailTextLabel.text = part.details;
-//	cell.imageView.image = [UIImage imageNamed:part.imageName];
 	
 	return cell;
 }
