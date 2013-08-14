@@ -103,8 +103,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AOL-VX-3Lc">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AOL-VX-3Lc">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="272" id="2ac-0E-nD9"/>
                                     <constraint firstAttribute="height" constant="359" id="pNj-Kd-Uep"/>
@@ -118,6 +118,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -284,6 +285,38 @@
         <image name="arrow.png" width="240" height="40"/>
         <image name="target.png" width="250" height="300"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="WFGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFGameViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="WFRootViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFRootViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="gameViewAction:"/>
+                <relationship kind="action" name="scoreViewAction:"/>
+                <relationship kind="action" name="startEasy:"/>
+                <relationship kind="action" name="startHard:"/>
+                <relationship kind="action" name="startMedium:"/>
+            </relationships>
+        </class>
+        <class className="WFScoreViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFScoreViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="resetAction:"/>
+                <relationship kind="outlet" name="scoreAcheived" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scoreAttainable" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="WFWordListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFWordListViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
