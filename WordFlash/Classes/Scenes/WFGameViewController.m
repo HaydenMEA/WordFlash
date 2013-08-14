@@ -44,48 +44,9 @@
 	// Do any additional setup after loading the view.
 	_wordController = [WFWordController defaultManager];
 	_scoreManager = [WFScoreManager defaultManager];
-	
-	
-	//	NSLog(@"%@", _wordController.words);
 	_buttonMutable = [[NSMutableArray alloc] init];
 	
-///////////----------------------
-///// --------- CORRECT WORDS
-///////////----------------------
-	
-	for (int i = 0; i < _wordController.selectedWords.count; i++)
-	{
-		
-		UIButton *correctWordsButton = [UIButton buttonWithTitle:[_wordController.selectedWords[i] string] target:self selector:@selector(wordTappedAction:)event:UIControlEventTouchDown];
-		
-		////------ KEEPING TRACK OF BUTTONS ------
-		
-		correctWordsButton.tag = i;
-		
-		////------ ADDING A SCROLL IMAGE TO BUTTON ------
-		
-		UIImage *scrollImage = [UIImage imageNamed:@"scroll.png"];
-		CGFloat widthInset = scrollImage.size.width * 0.5 -1;
-		CGFloat heightInset = scrollImage.size.height * 0.5 -1;
-		UIEdgeInsets insets = UIEdgeInsetsMake(heightInset, widthInset, heightInset, widthInset);
-		scrollImage = [scrollImage resizableImageWithCapInsets:insets];
-		[correctWordsButton setBackgroundImage:scrollImage forState:UIControlStateNormal];
-		
-		////------ SET COLOR OF BUTTON TEXT ------
-		
-		//		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		[correctWordsButton sizeToFit];
-		
-		[self.view addSubview:correctWordsButton];
-		
-		
-		
-		////------ RANDOMIZE WHERE BUTTON SPAWNS ABOVE THE SCREEN ------
-		
-		[self randomizeCenter:correctWordsButton];
-		[_buttonMutable addObject:correctWordsButton];
-		
-	}
+
 ///////////----------------------
 ///// --------- WRONG WORDS
 ///////////----------------------
@@ -124,7 +85,43 @@
 		[_buttonMutable addObject:wrongWordsButton];
 		
 	}
+	///////////----------------------
+	///// --------- CORRECT WORDS
+	///////////----------------------
 	
+	for (int i = 0; i < _wordController.selectedWords.count; i++)
+	{
+		
+		UIButton *correctWordsButton = [UIButton buttonWithTitle:[_wordController.selectedWords[i] string] target:self selector:@selector(wordTappedAction:)event:UIControlEventTouchDown];
+		
+		////------ KEEPING TRACK OF BUTTONS ------
+		
+		correctWordsButton.tag = i;
+		
+		////------ ADDING A SCROLL IMAGE TO BUTTON ------
+		
+		UIImage *scrollImage = [UIImage imageNamed:@"scroll.png"];
+		CGFloat widthInset = scrollImage.size.width * 0.5 -1;
+		CGFloat heightInset = scrollImage.size.height * 0.5 -1;
+		UIEdgeInsets insets = UIEdgeInsetsMake(heightInset, widthInset, heightInset, widthInset);
+		scrollImage = [scrollImage resizableImageWithCapInsets:insets];
+		[correctWordsButton setBackgroundImage:scrollImage forState:UIControlStateNormal];
+		
+		////------ SET COLOR OF BUTTON TEXT ------
+		
+		//		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		[correctWordsButton sizeToFit];
+		
+		[self.view addSubview:correctWordsButton];
+		
+		
+		
+		////------ RANDOMIZE WHERE BUTTON SPAWNS ABOVE THE SCREEN ------
+		
+		[self randomizeCenter:correctWordsButton];
+		[_buttonMutable addObject:correctWordsButton];
+		
+	}
 	
 	_displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(buttonMove:)];
 	[_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
