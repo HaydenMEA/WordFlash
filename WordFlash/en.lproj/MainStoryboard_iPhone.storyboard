@@ -102,22 +102,22 @@
                                     <constraint firstItem="ahj-n1-YPb" firstAttribute="baseline" secondItem="H0w-dt-Xro" secondAttribute="baseline" type="default" id="CRm-BV-ZGH"/>
                                     <constraint firstAttribute="bottom" secondItem="H0w-dt-Xro" secondAttribute="bottom" constant="5" id="Eae-MB-dhu"/>
                                     <constraint firstItem="Rhe-P3-nQh" firstAttribute="leading" secondItem="OP0-bp-3mk" secondAttribute="leading" type="default" id="IR4-Yl-9oQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rhe-P3-nQh" secondAttribute="bottom" constant="1" id="Nmy-xb-FuO"/>
                                     <constraint firstItem="H0w-dt-Xro" firstAttribute="baseline" secondItem="Rhe-P3-nQh" secondAttribute="baseline" type="default" id="W2o-Wz-woY"/>
                                     <constraint firstItem="pau-dg-G1H" firstAttribute="top" secondItem="ahj-n1-YPb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YYB-un-W9a"/>
                                     <constraint firstItem="Rhe-P3-nQh" firstAttribute="top" secondItem="pau-dg-G1H" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ZQB-PC-00W"/>
                                     <constraint firstItem="pau-dg-G1H" firstAttribute="baseline" secondItem="H0w-dt-Xro" secondAttribute="baseline" type="default" id="dOf-jB-9Wo"/>
+                                    <constraint firstItem="ahj-n1-YPb" firstAttribute="top" secondItem="OP0-bp-3mk" secondAttribute="top" constant="87" id="f7g-gQ-XpT"/>
                                     <constraint firstItem="pau-dg-G1H" firstAttribute="leading" secondItem="OP0-bp-3mk" secondAttribute="leading" type="default" id="gAE-xS-gHi"/>
                                     <constraint firstItem="ahj-n1-YPb" firstAttribute="trailing" secondItem="OP0-bp-3mk" secondAttribute="trailing" type="default" id="iMB-dZ-nA1"/>
                                     <constraint firstItem="H0w-dt-Xro" firstAttribute="trailing" secondItem="OP0-bp-3mk" secondAttribute="trailing" type="default" id="nE9-iV-sUk"/>
                                     <constraint firstItem="ahj-n1-YPb" firstAttribute="leading" secondItem="OP0-bp-3mk" secondAttribute="leading" type="default" id="oha-Yo-v5S"/>
-                                    <constraint firstItem="Rhe-P3-nQh" firstAttribute="bottom" secondItem="OP0-bp-3mk" secondAttribute="bottom" type="default" id="qO5-5j-vZn"/>
                                     <constraint firstItem="pau-dg-G1H" firstAttribute="trailing" secondItem="OP0-bp-3mk" secondAttribute="trailing" type="default" id="yVz-5t-hDD"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OP0-bp-3mk" firstAttribute="top" secondItem="3" secondAttribute="top" constant="139" id="1tS-5p-45h"/>
                             <constraint firstItem="p4Z-m8-hR1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="24" id="92A-d9-1pB"/>
                             <constraint firstItem="2Oz-9K-p0l" firstAttribute="top" secondItem="gsX-Xy-WEJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9D0-1T-t7C"/>
                             <constraint firstItem="gsX-Xy-WEJ" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="Atz-JD-bUI"/>
@@ -330,41 +330,6 @@
         <image name="arrow.png" width="240" height="40"/>
         <image name="target.png" width="250" height="300"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="WFGameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFGameViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="WFRootViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFRootViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="gameViewAction:"/>
-                <relationship kind="action" name="scoreViewAction:"/>
-                <relationship kind="action" name="startEasy:"/>
-                <relationship kind="action" name="startHard:"/>
-                <relationship kind="action" name="startMedium:"/>
-            </relationships>
-        </class>
-        <class className="WFScoreViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFScoreViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="resetAction:"/>
-                <relationship kind="outlet" name="scoreAcheived" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scoreAttainable" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="WFScrollButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFScrollButton.h"/>
-        </class>
-        <class className="WFWordListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WFWordListViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
