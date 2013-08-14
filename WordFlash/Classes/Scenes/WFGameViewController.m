@@ -109,8 +109,8 @@
 		[correctWordsButton setBackgroundImage:scrollImage forState:UIControlStateNormal];
 		
 		////------ SET COLOR OF BUTTON TEXT ------
-		
-		//		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+		[correctWordsButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[correctWordsButton sizeToFit];
 		
 		[self.view addSubview:correctWordsButton];
